@@ -1,0 +1,23 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30320.27
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{D2ABAB84-BF74-430A-B69E-9DC6D40DDA17}") = "OLAP_Mining", "OLAP_Mining\OLAP_Mining.dwproj", "{46581C21-D9B7-493C-B085-90B1011363D7}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Development|Default = Development|Default
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{46581C21-D9B7-493C-B085-90B1011363D7}.Development|Default.ActiveCfg = Development
+		{46581C21-D9B7-493C-B085-90B1011363D7}.Development|Default.Build.0 = Development
+		{46581C21-D9B7-493C-B085-90B1011363D7}.Development|Default.Deploy.0 = Development
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {8111D20D-ED53-482D-B5C2-C75986301873}
+	EndGlobalSection
+EndGlobal

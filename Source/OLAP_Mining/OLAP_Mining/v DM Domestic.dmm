@@ -1,0 +1,429 @@
+﻿<MiningStructure xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ddl2="http://schemas.microsoft.com/analysisservices/2003/engine/2" xmlns:ddl2_2="http://schemas.microsoft.com/analysisservices/2003/engine/2/2" xmlns:ddl100_100="http://schemas.microsoft.com/analysisservices/2008/engine/100/100" xmlns:ddl200="http://schemas.microsoft.com/analysisservices/2010/engine/200" xmlns:ddl200_200="http://schemas.microsoft.com/analysisservices/2010/engine/200/200" xmlns:ddl300="http://schemas.microsoft.com/analysisservices/2011/engine/300" xmlns:ddl300_300="http://schemas.microsoft.com/analysisservices/2011/engine/300/300" xmlns:ddl400="http://schemas.microsoft.com/analysisservices/2012/engine/400" xmlns:ddl400_400="http://schemas.microsoft.com/analysisservices/2012/engine/400/400" xmlns:ddl500="http://schemas.microsoft.com/analysisservices/2013/engine/500" xmlns:ddl500_500="http://schemas.microsoft.com/analysisservices/2013/engine/500/500" xmlns:dwd="http://schemas.microsoft.com/DataWarehouse/Designer/1.0" dwd:design-time-name="bdce208f-c76a-4908-8dc2-567d7fd88586" xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">
+  <ID>v DM Domestic</ID>
+  <Name>v DM Domestic</Name>
+  <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+  <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+  <Annotations>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:CaseTableName</Name>
+      <Value>dbo_vDM</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ShowFriendlyNames</Name>
+      <Value>true</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramLayout</Name>
+      <Value>
+        <dds xmlns="">
+          <diagram fontclsid="{0BE35203-8F91-11CE-9DE3-00AA004BB851}" mouseiconclsid="{0BE35204-8F91-11CE-9DE3-00AA004BB851}" defaultlayout="MSDDS.Rectilinear" defaultlineroute="MSDDS.Rectilinear" version="7" nextobject="3" scale="100" pagebreakanchorx="0" pagebreakanchory="0" pagebreaksizex="0" pagebreaksizey="0" scrollleft="-7134" scrolltop="-3522" gridx="150" gridy="150" marginx="5000" marginy="5000" zoom="100" x="20849" y="12044" backcolor="2434342" defaultpersistence="2" PrintPageNumbersMode="3" PrintMarginTop="0" PrintMarginBottom="635" PrintMarginLeft="0" PrintMarginRight="0" marqueeselectionmode="0" mousepointer="0" snaptogrid="0" autotypeannotation="1" showscrollbars="0" viewpagebreaks="0" donotforceconnectorsbehindshapes="1" backpictureclsid="{00000000-0000-0000-0000-000000000000}">
+            <font>
+              <ddsxmlobjectstreamwrapper binary="010000009001b0300100065461686f6d61" />
+            </font>
+            <mouseicon>
+              <ddsxmlobjectstreamwrapper binary="6c74000000000000" />
+            </mouseicon>
+          </diagram>
+          <layoutmanager>
+            <ddsxmlobj />
+          </layoutmanager>
+          <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge" tooltip="vDM" left="-1187" top="-2286" logicalid="2" controlid="1" masterid="0" hint1="0" hint2="0" width="7091" height="10143" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobjectstreaminitwrapper binary="000e0000b31b00009f270000" />
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="dbo_vDM" vartype="8" />
+              </ddsxmlobj>
+            </layoutobject>
+            <shape groupshapeid="0" groupnode="0" />
+          </ddscontrol>
+        </dds>
+      </Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ShowRelationshipNames</Name>
+      <Value>false</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:UseDiagramDefaultLayout</Name>
+      <Value>true</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramViewPortLeft</Name>
+      <Value>-7134</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramViewPortTop</Name>
+      <Value>-3522</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramBoundingLeft</Name>
+      <Value>-1187</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramBoundingTop</Name>
+      <Value>-2286</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramZoom</Name>
+      <Value>100</Value>
+    </Annotation>
+  </Annotations>
+  <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+  <State>Unprocessed</State>
+  <Source xsi:type="DataSourceViewBinding" dwd:design-time-name="93d4056b-7878-47e6-b673-bc5c6bb3c362">
+    <DataSourceViewID>DDS Chicago Crime</DataSourceViewID>
+  </Source>
+  <Columns>
+    <Column xsi:type="ScalarMiningStructureColumn" dwd:design-time-name="9cb32b21-b2c2-475e-ab08-158a526a348e">
+      <ID>Case Number</ID>
+      <Name>Case Number</Name>
+      <IsKey>true</IsKey>
+      <Type>Text</Type>
+      <Content>Key</Content>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="68e6bf73-bfc3-400d-b088-d503aa1a5970">
+          <DataType>WChar</DataType>
+          <DataSize>10</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="5cff8703-56f2-46d7-9377-fcbb1d335064">
+            <TableID>dbo_vDM</TableID>
+            <ColumnID>Case_x0020_Number</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+    </Column>
+    <Column xsi:type="ScalarMiningStructureColumn" dwd:design-time-name="016eafdc-1fcd-4dc2-b60d-c5b9cd8715ee">
+      <ID>Categories</ID>
+      <Name>Categories</Name>
+      <Type>Text</Type>
+      <Content>Discrete</Content>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="a5dfcf2d-7330-4e85-8646-1db8d3a2e812">
+          <DataType>WChar</DataType>
+          <DataSize>25</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="329e8e99-66b8-4bbb-a7d6-e8c5356cd29f">
+            <TableID>dbo_vDM</TableID>
+            <ColumnID>Categories</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+    </Column>
+    <Column xsi:type="ScalarMiningStructureColumn" dwd:design-time-name="e6e4c5c3-30a8-421c-8083-483f103a5667">
+      <ID>COMMUNITY AREA NAME</ID>
+      <Name>COMMUNITY AREA NAME</Name>
+      <Type>Text</Type>
+      <Content>Discrete</Content>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="b39cf115-b4e8-48b1-a236-4077c4a20f14">
+          <DataType>WChar</DataType>
+          <DataSize>200</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="5f86aa9a-e671-4003-9741-81bcc315e3f3">
+            <TableID>dbo_vDM</TableID>
+            <ColumnID>COMMUNITY_x0020_AREA_x0020_NAME</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+    </Column>
+    <Column xsi:type="ScalarMiningStructureColumn" dwd:design-time-name="65b9fcf8-b884-4fbb-8736-bfc986718b78">
+      <ID>Day Of Month</ID>
+      <Name>Day Of Month</Name>
+      <Type>Long</Type>
+      <Content>Discrete</Content>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="df7430db-0b3d-4dc7-9e84-4aed1dce0fc5">
+          <DataType>Integer</DataType>
+          <DataSize>-1</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="daea0933-30dd-4821-9fc6-45fb9e150481">
+            <TableID>dbo_vDM</TableID>
+            <ColumnID>DayOfMonth</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+    </Column>
+    <Column xsi:type="ScalarMiningStructureColumn" dwd:design-time-name="f4c7eeb0-dd01-4f8b-8e79-cb7f16f7615c">
+      <ID>Domestic</ID>
+      <Name>Domestic</Name>
+      <Type>Boolean</Type>
+      <Content>Discrete</Content>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="e42a99c8-c2bb-4998-a63a-b04cf225fa07">
+          <DataType>Boolean</DataType>
+          <DataSize>-1</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="f9060bd1-39d0-444f-8d8e-57d0bde93c21">
+            <TableID>dbo_vDM</TableID>
+            <ColumnID>Domestic</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+    </Column>
+    <Column xsi:type="ScalarMiningStructureColumn" dwd:design-time-name="75422ca6-00c2-4b87-b10b-67aec25c27d7">
+      <ID>Hardship Index</ID>
+      <Name>Hardship Index</Name>
+      <Type>Text</Type>
+      <Content>Discrete</Content>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="319c18e9-bf25-4700-b578-9f418d752991">
+          <DataType>WChar</DataType>
+          <DataSize>6</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="9d81ed33-16c0-4473-923b-0ebe04213eaa">
+            <TableID>dbo_vDM</TableID>
+            <ColumnID>Hardship_x0020_Index</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+    </Column>
+    <Column xsi:type="ScalarMiningStructureColumn" dwd:design-time-name="dad52a0c-3dfc-442f-92fc-88cbba94a240">
+      <ID>HOUSEHOLDS BELOW POVERTY</ID>
+      <Name>HOUSEHOLDS BELOW POVERTY</Name>
+      <Type>Text</Type>
+      <Content>Discrete</Content>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="e62a46ef-235f-4712-8b3b-dc228fb76b7c">
+          <DataType>WChar</DataType>
+          <DataSize>6</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="049f70c7-0f60-45f7-b927-8e3f06318f20">
+            <TableID>dbo_vDM</TableID>
+            <ColumnID>HOUSEHOLDS_x0020_BELOW_x0020_POVERTY</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+    </Column>
+    <Column xsi:type="ScalarMiningStructureColumn" dwd:design-time-name="0e93a8b4-69bc-4dbc-8718-bb29af9ff621">
+      <ID>HOUSING CROWDED</ID>
+      <Name>HOUSING CROWDED</Name>
+      <Type>Text</Type>
+      <Content>Discrete</Content>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="636d47d7-9fbe-4235-ba39-457779690fb3">
+          <DataType>WChar</DataType>
+          <DataSize>6</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="c61924d2-7621-4f66-a632-bdf6fc1c0f73">
+            <TableID>dbo_vDM</TableID>
+            <ColumnID>HOUSING_x0020_CROWDED</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+    </Column>
+    <Column xsi:type="ScalarMiningStructureColumn" dwd:design-time-name="b2965047-761a-4dbc-91ca-f148fbcdd508">
+      <ID>Income</ID>
+      <Name>Income</Name>
+      <Type>Text</Type>
+      <Content>Discrete</Content>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="94108d8b-8142-483e-9fff-3bd83aa8ff8c">
+          <DataType>WChar</DataType>
+          <DataSize>6</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="1e7e78b8-8e23-4cec-99ad-af7df2818b41">
+            <TableID>dbo_vDM</TableID>
+            <ColumnID>Income</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+    </Column>
+    <Column xsi:type="ScalarMiningStructureColumn" dwd:design-time-name="aa4e1c25-38ee-48e3-a6df-537ede638d24">
+      <ID>Location Description Name</ID>
+      <Name>Location Description Name</Name>
+      <Type>Text</Type>
+      <Content>Discrete</Content>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="9bd13102-f0fd-4015-b65e-7988243b52ac">
+          <DataType>WChar</DataType>
+          <DataSize>100</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="574bdc54-edd8-40ba-a54f-22c5b92debeb">
+            <TableID>dbo_vDM</TableID>
+            <ColumnID>LocationDescriptionName</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+    </Column>
+    <Column xsi:type="ScalarMiningStructureColumn" dwd:design-time-name="cc8d0ae1-201c-4c33-954a-6191d201b481">
+      <ID>Month Number</ID>
+      <Name>Month Number</Name>
+      <Type>Long</Type>
+      <Content>Discrete</Content>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="7f5c2e4e-ffc0-42af-8389-812b1357e958">
+          <DataType>Integer</DataType>
+          <DataSize>-1</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="8ff41179-c5be-4682-8688-c170359db324">
+            <TableID>dbo_vDM</TableID>
+            <ColumnID>MonthNumber</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+    </Column>
+    <Column xsi:type="ScalarMiningStructureColumn" dwd:design-time-name="7a1281a7-8359-4a1b-87a2-aa7197d026c0">
+      <ID>Primary Type</ID>
+      <Name>Primary Type</Name>
+      <Type>Text</Type>
+      <Content>Discrete</Content>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="c9d702ad-0a9e-4a1b-bcba-b6b9c0374f38">
+          <DataType>WChar</DataType>
+          <DataSize>50</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="e501bed7-0e28-4802-b654-3181b037dcc0">
+            <TableID>dbo_vDM</TableID>
+            <ColumnID>Primary_x0020_Type</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+    </Column>
+    <Column xsi:type="ScalarMiningStructureColumn" dwd:design-time-name="cf34013d-da63-4314-a23a-05b3e370ed79">
+      <ID>Theft</ID>
+      <Name>Theft</Name>
+      <Type>Boolean</Type>
+      <Content>Discrete</Content>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="b2e718f2-58b6-4043-bf1c-34a0a988d13a">
+          <DataType>Boolean</DataType>
+          <DataSize>-1</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="1c0ed03a-dc71-484f-89ea-2da324b9ed3e">
+            <TableID>dbo_vDM</TableID>
+            <ColumnID>Theft</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+    </Column>
+    <Column xsi:type="ScalarMiningStructureColumn" dwd:design-time-name="2543d7bd-43af-457c-b850-4ee0d4a4f76c">
+      <ID>UNDER 18 OR OVER 64</ID>
+      <Name>UNDER 18 OR OVER 64</Name>
+      <Type>Text</Type>
+      <Content>Discrete</Content>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="991bd1dc-b4b9-4271-9307-5c8f57b75e39">
+          <DataType>WChar</DataType>
+          <DataSize>4</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="6475f180-0a5e-41f6-8828-a785c4b37658">
+            <TableID>dbo_vDM</TableID>
+            <ColumnID>UNDER_x0020_18_x0020_OR_x0020_OVER_x0020_64</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+    </Column>
+    <Column xsi:type="ScalarMiningStructureColumn" dwd:design-time-name="e982a343-fb3f-4d0c-adde-c02583fbc93b">
+      <ID>Week Number</ID>
+      <Name>Week Number</Name>
+      <Type>Long</Type>
+      <Content>Discrete</Content>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="bdf5812e-5ecf-47e5-b34c-516508086df5">
+          <DataType>Integer</DataType>
+          <DataSize>-1</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="f1c12b54-9fa3-44f8-b5df-8ff450341cca">
+            <TableID>dbo_vDM</TableID>
+            <ColumnID>WeekNumber</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+    </Column>
+    <Column xsi:type="ScalarMiningStructureColumn" dwd:design-time-name="92154ddc-cb52-4583-84b2-9ad47589e1d1">
+      <ID>Year</ID>
+      <Name>Year</Name>
+      <Type>Long</Type>
+      <Content>Discrete</Content>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="9901f616-a1a7-412f-9caf-4d3f45b29cad">
+          <DataType>Integer</DataType>
+          <DataSize>-1</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="0fa6baea-4b4c-4bc7-8362-1c999af79944">
+            <TableID>dbo_vDM</TableID>
+            <ColumnID>Year</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+    </Column>
+  </Columns>
+  <MiningModels>
+    <MiningModel dwd:design-time-name="8a82a69f-a047-42d5-85fe-dd347e5af7ba">
+      <ID>v DM Domestic</ID>
+      <Name>v DM Domestic</Name>
+      <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+      <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+      <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+      <State>Unprocessed</State>
+      <Algorithm>Microsoft_Decision_Trees</Algorithm>
+      <AlgorithmParameters>
+        <AlgorithmParameter>
+          <Name>SPLIT_METHOD</Name>
+          <Value xsi:type="xsd:int">2</Value>
+        </AlgorithmParameter>
+      </AlgorithmParameters>
+      <Columns>
+        <Column dwd:design-time-name="019477dd-e800-4c41-a470-b73bf08d8bc7">
+          <ID>Case Number</ID>
+          <Name>Case Number</Name>
+          <SourceColumnID>Case Number</SourceColumnID>
+          <Usage>Key</Usage>
+        </Column>
+        <Column dwd:design-time-name="35241347-1920-4741-894f-3e1a2b4a2203">
+          <ID>Categories</ID>
+          <Name>Categories</Name>
+          <SourceColumnID>Categories</SourceColumnID>
+        </Column>
+        <Column dwd:design-time-name="085da2bf-cb99-45a0-b0c6-74ede677e08e">
+          <ID>Day Of Month</ID>
+          <Name>Day Of Month</Name>
+          <SourceColumnID>Day Of Month</SourceColumnID>
+        </Column>
+        <Column dwd:design-time-name="b5a7dd07-54be-45b9-860f-044e2a020510">
+          <ID>Domestic</ID>
+          <Name>Domestic</Name>
+          <SourceColumnID>Domestic</SourceColumnID>
+          <Usage>PredictOnly</Usage>
+        </Column>
+        <Column dwd:design-time-name="38136c7b-2d53-4d54-bee1-9571ac04c2c2">
+          <ID>Hardship Index</ID>
+          <Name>Hardship Index</Name>
+          <SourceColumnID>Hardship Index</SourceColumnID>
+        </Column>
+        <Column dwd:design-time-name="83391b30-fe7b-41be-bd82-147b3da7b33f">
+          <ID>HOUSEHOLDS BELOW POVERTY</ID>
+          <Name>HOUSEHOLDS BELOW POVERTY</Name>
+          <SourceColumnID>HOUSEHOLDS BELOW POVERTY</SourceColumnID>
+        </Column>
+        <Column dwd:design-time-name="75fd37d6-37d9-4e12-a00e-30b3109df473">
+          <ID>HOUSING CROWDED</ID>
+          <Name>HOUSING CROWDED</Name>
+          <SourceColumnID>HOUSING CROWDED</SourceColumnID>
+        </Column>
+        <Column dwd:design-time-name="4a940b35-aedd-4d77-ae5d-3b8a73ce79ef">
+          <ID>Income</ID>
+          <Name>Income</Name>
+          <SourceColumnID>Income</SourceColumnID>
+        </Column>
+        <Column dwd:design-time-name="0b683f74-8350-4680-92c3-2ccd5bed1f81">
+          <ID>Location Description Name</ID>
+          <Name>Location Description Name</Name>
+          <SourceColumnID>Location Description Name</SourceColumnID>
+        </Column>
+        <Column dwd:design-time-name="d2072428-4f32-44cc-be3e-9d142ed829c9">
+          <ID>Month Number</ID>
+          <Name>Month Number</Name>
+          <SourceColumnID>Month Number</SourceColumnID>
+        </Column>
+        <Column dwd:design-time-name="13e7ec3d-ee8c-4c04-a4ac-66d7d97593bf">
+          <ID>Primary Type</ID>
+          <Name>Primary Type</Name>
+          <SourceColumnID>Primary Type</SourceColumnID>
+        </Column>
+        <Column dwd:design-time-name="f66271b0-3db4-4d59-8320-6f28fe8f9d47">
+          <ID>Theft</ID>
+          <Name>Theft</Name>
+          <SourceColumnID>Theft</SourceColumnID>
+        </Column>
+        <Column dwd:design-time-name="216c7bf6-afa1-43fe-bc35-16ba5ed705a9">
+          <ID>UNDER 18 OR OVER 64</ID>
+          <Name>UNDER 18 OR OVER 64</Name>
+          <SourceColumnID>UNDER 18 OR OVER 64</SourceColumnID>
+        </Column>
+        <Column dwd:design-time-name="e5642ede-9d63-41be-a654-46b19d8bb10d">
+          <ID>Week Number</ID>
+          <Name>Week Number</Name>
+          <SourceColumnID>Week Number</SourceColumnID>
+        </Column>
+      </Columns>
+    </MiningModel>
+  </MiningModels>
+  <ddl100_100:HoldoutMaxPercent>30</ddl100_100:HoldoutMaxPercent>
+</MiningStructure>

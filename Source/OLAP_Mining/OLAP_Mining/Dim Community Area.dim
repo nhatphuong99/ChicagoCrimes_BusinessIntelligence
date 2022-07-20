@@ -1,0 +1,276 @@
+﻿<Dimension xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ddl2="http://schemas.microsoft.com/analysisservices/2003/engine/2" xmlns:ddl2_2="http://schemas.microsoft.com/analysisservices/2003/engine/2/2" xmlns:ddl100_100="http://schemas.microsoft.com/analysisservices/2008/engine/100/100" xmlns:ddl200="http://schemas.microsoft.com/analysisservices/2010/engine/200" xmlns:ddl200_200="http://schemas.microsoft.com/analysisservices/2010/engine/200/200" xmlns:ddl300="http://schemas.microsoft.com/analysisservices/2011/engine/300" xmlns:ddl300_300="http://schemas.microsoft.com/analysisservices/2011/engine/300/300" xmlns:ddl400="http://schemas.microsoft.com/analysisservices/2012/engine/400" xmlns:ddl400_400="http://schemas.microsoft.com/analysisservices/2012/engine/400/400" xmlns:ddl500="http://schemas.microsoft.com/analysisservices/2013/engine/500" xmlns:ddl500_500="http://schemas.microsoft.com/analysisservices/2013/engine/500/500" xmlns:dwd="http://schemas.microsoft.com/DataWarehouse/Designer/1.0" dwd:design-time-name="3084db4e-0407-4065-bab6-e71a34ace280" xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">
+  <ID>Dim Community Area</ID>
+  <Name>Dim Community Area</Name>
+  <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+  <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+  <Annotations>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramLayout</Name>
+      <Value>
+        <dds xmlns="">
+          <diagram fontclsid="{0BE35203-8F91-11CE-9DE3-00AA004BB851}" mouseiconclsid="{0BE35204-8F91-11CE-9DE3-00AA004BB851}" defaultlayout="MSDDS.Rectilinear" defaultlineroute="MSDDS.Rectilinear" version="7" nextobject="2" scale="100" pagebreakanchorx="0" pagebreakanchory="0" pagebreaksizex="0" pagebreaksizey="0" scrollleft="36" scrolltop="-4215" gridx="150" gridy="150" marginx="5000" marginy="5000" zoom="87" x="8170" y="12129" backcolor="2434342" defaultpersistence="2" PrintPageNumbersMode="3" PrintMarginTop="0" PrintMarginBottom="635" PrintMarginLeft="0" PrintMarginRight="0" marqueeselectionmode="0" mousepointer="0" snaptogrid="0" autotypeannotation="1" showscrollbars="1" viewpagebreaks="0" donotforceconnectorsbehindshapes="1" backpictureclsid="{00000000-0000-0000-0000-000000000000}">
+            <font>
+              <ddsxmlobjectstreamwrapper binary="010000009001b0300100065461686f6d61" />
+            </font>
+            <mouseicon>
+              <ddsxmlobjectstreamwrapper binary="6c74000000000000" />
+            </mouseicon>
+          </diagram>
+          <layoutmanager>
+            <ddsxmlobj />
+          </layoutmanager>
+          <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge" tooltip="Dim_CommunityArea" left="20" top="0" logicalid="1" controlid="1" masterid="0" hint1="0" hint2="0" width="8911" height="5000" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobjectstreaminitwrapper binary="000e0000cf22000088130000" />
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="dbo_Dim_CommunityArea" vartype="8" />
+              </ddsxmlobj>
+            </layoutobject>
+            <shape groupshapeid="0" groupnode="0" />
+          </ddscontrol>
+        </dds>
+      </Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ShowFriendlyNames</Name>
+      <Value>true</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ShowRelationshipNames</Name>
+      <Value>false</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:UseDiagramDefaultLayout</Name>
+      <Value>true</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramViewPortLeft</Name>
+      <Value>36</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramViewPortTop</Name>
+      <Value>-4215</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramBoundingLeft</Name>
+      <Value>20</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramBoundingTop</Name>
+      <Value>0</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramZoom</Name>
+      <Value>87</Value>
+    </Annotation>
+  </Annotations>
+  <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+  <State>Unprocessed</State>
+  <Source xsi:type="DataSourceViewBinding" dwd:design-time-name="6c56c4d6-9df1-4550-99a8-513eaad0bd0e">
+    <DataSourceViewID>DDS Chicago Crime</DataSourceViewID>
+  </Source>
+  <UnknownMember>Visible</UnknownMember>
+  <ErrorConfiguration dwd:design-time-name="03dbc88f-eb2c-422e-8c1b-69fc3543e333">
+    <KeyNotFound>ReportAndStop</KeyNotFound>
+    <KeyDuplicate>ReportAndStop</KeyDuplicate>
+    <NullKeyNotAllowed>ReportAndStop</NullKeyNotAllowed>
+  </ErrorConfiguration>
+  <CurrentStorageMode>Molap</CurrentStorageMode>
+  <Attributes>
+    <Attribute dwd:design-time-name="2f3f2ba7-8a96-4a4e-bd7e-0c6d933c37e6">
+      <ID>Community Area Key</ID>
+      <Name>Community Area Key</Name>
+      <Usage>Key</Usage>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="47d89a8a-77a3-4f59-b6c0-be9528ccff18">
+          <DataType>Integer</DataType>
+          <NullProcessing>UnknownMember</NullProcessing>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="7245d1b2-0ddd-4f1d-9972-ca03d06b3b2c">
+            <TableID>dbo_Dim_CommunityArea</TableID>
+            <ColumnID>CommunityAreaKey</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <AttributeRelationships>
+        <AttributeRelationship dwd:design-time-name="68ce1a51-4ff9-456d-8414-a71bfe4e0966">
+          <AttributeID>Community Area Number</AttributeID>
+          <Name>Community Area Number</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="5a97c5dd-81aa-41a5-9b7f-954de9da1758">
+          <AttributeID>COMMUNITY AREA NAME</AttributeID>
+          <Name>COMMUNITY AREA NAME</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="d70b57e1-f27e-49e1-b1d0-2d0858092a07">
+          <AttributeID>PERCENT OF HOUSING CROWDED</AttributeID>
+          <Name>PERCENT OF HOUSING CROWDED</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="a663aef8-8a6f-400e-aa2d-9890d810c28e">
+          <AttributeID>PERCENT HOUSEHOLDS BELOW POVERTY</AttributeID>
+          <Name>PERCENT HOUSEHOLDS BELOW POVERTY</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="fdbd97e6-cfb4-41e7-92fa-30a517de0e69">
+          <AttributeID>PERCENT AGED 16 UNEMPLOYED</AttributeID>
+          <Name>PERCENT AGED 16 UNEMPLOYED</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="53859ae7-3c43-494d-bd62-5b303a7978d3">
+          <AttributeID>PERCENT AGED 25 WITHOUT HIGH SCHOOL DIPLOMA</AttributeID>
+          <Name>PERCENT AGED 25 WITHOUT HIGH SCHOOL DIPLOMA</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="64acedf7-adab-4684-b13c-ebcb790b6a91">
+          <AttributeID>PERCENT AGED UNDER 18 OR OVER 64</AttributeID>
+          <Name>PERCENT AGED UNDER 18 OR OVER 64</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="21a685e6-c581-46cd-866e-a918f8bc9241">
+          <AttributeID>PER CAPITA INCOME</AttributeID>
+          <Name>PER CAPITA INCOME</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="b32869f4-ffb3-4bb7-9ca6-bfb7a3843af0">
+          <AttributeID>HARDSHIP INDEX</AttributeID>
+          <Name>HARDSHIP INDEX</Name>
+        </AttributeRelationship>
+      </AttributeRelationships>
+      <OrderBy>Key</OrderBy>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="a8458e34-d748-4b5d-9d0d-f90ea10ced43">
+      <ID>Community Area Number</ID>
+      <Name>Community Area Number</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="79abf77e-0fd2-4d1d-9b43-be6be6a8e9ee">
+          <DataType>SmallInt</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="0f6f14ba-0992-4ec6-8ec8-992f127e9a65">
+            <TableID>dbo_Dim_CommunityArea</TableID>
+            <ColumnID>Community_x0020_Area_x0020_Number</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="a53f5f68-6fe9-4f8e-8941-f7fc90ef6f40">
+      <ID>COMMUNITY AREA NAME</ID>
+      <Name>COMMUNITY AREA NAME</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="8ad780d7-fcd3-4414-a273-203759787ea3">
+          <DataType>WChar</DataType>
+          <DataSize>200</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="fafaac90-1d98-4877-83be-213241449be9">
+            <TableID>dbo_Dim_CommunityArea</TableID>
+            <ColumnID>COMMUNITY_x0020_AREA_x0020_NAME</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="37575a15-3154-4a0b-8ad7-6b15f4b8be97">
+      <ID>PERCENT OF HOUSING CROWDED</ID>
+      <Name>PERCENT OF HOUSING CROWDED</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="3aad1123-986d-4881-af9a-830c047970fe">
+          <DataType>Single</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="801f2929-728a-4415-b580-55c95dd0aab2">
+            <TableID>dbo_Dim_CommunityArea</TableID>
+            <ColumnID>PERCENT_x0020_OF_x0020_HOUSING_x0020_CROWDED</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="cf51694c-7e23-4b29-8ee1-452d2f4e17b5">
+      <ID>PERCENT HOUSEHOLDS BELOW POVERTY</ID>
+      <Name>PERCENT HOUSEHOLDS BELOW POVERTY</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="63566295-d85b-48d5-9698-f8242b5d848e">
+          <DataType>Single</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="5dcd8a23-9334-4474-b11a-4ec3112c5092">
+            <TableID>dbo_Dim_CommunityArea</TableID>
+            <ColumnID>PERCENT_x0020_HOUSEHOLDS_x0020_BELOW_x0020_POVERTY</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="e7714da7-148f-4f5d-b23a-0ecec1ce1c2d">
+      <ID>PERCENT AGED 16 UNEMPLOYED</ID>
+      <Name>PERCENT AGED 16 UNEMPLOYED</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="cea016f3-6859-410f-8a16-9ddd87808ba6">
+          <DataType>Single</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="adf2a970-95e5-4880-90b4-4c61bac83b7a">
+            <TableID>dbo_Dim_CommunityArea</TableID>
+            <ColumnID>PERCENT_x0020_AGED_x0020_16_x002B__x0020_UNEMPLOYED</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="2423172f-d0a6-4909-ad20-a5ad61424c64">
+      <ID>PERCENT AGED 25 WITHOUT HIGH SCHOOL DIPLOMA</ID>
+      <Name>PERCENT AGED 25 WITHOUT HIGH SCHOOL DIPLOMA</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="3e488089-d6b3-4964-bd11-ac3da77de356">
+          <DataType>Single</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="5cb3b856-e303-44f8-b24b-8d39673613b5">
+            <TableID>dbo_Dim_CommunityArea</TableID>
+            <ColumnID>PERCENT_x0020_AGED_x0020_25_x002B__x0020_WITHOUT_x0020_HIGH_x0020_SCHOOL_x0020_DIPLOMA</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="2bb465d6-da5d-497d-82aa-1e1abe40ece1">
+      <ID>PERCENT AGED UNDER 18 OR OVER 64</ID>
+      <Name>PERCENT AGED UNDER 18 OR OVER 64</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="748c1028-0e51-4436-ab65-e79e60c55c6e">
+          <DataType>Single</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="74e3ec00-8c74-4d1a-848d-d8a186fb8919">
+            <TableID>dbo_Dim_CommunityArea</TableID>
+            <ColumnID>PERCENT_x0020_AGED_x0020_UNDER_x0020_18_x0020_OR_x0020_OVER_x0020_64</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="76903646-c4b5-4396-8fb7-0f49b8a0b3ef">
+      <ID>PER CAPITA INCOME</ID>
+      <Name>PER CAPITA INCOME</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="a5fb8b85-98d1-4637-903e-64ff440d1f9a">
+          <DataType>Integer</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="a835b00e-1ecb-46bc-b38e-d1637977cf2f">
+            <TableID>dbo_Dim_CommunityArea</TableID>
+            <ColumnID>PER_x0020_CAPITA_x0020_INCOME</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="d629251c-4c43-46ab-9982-d5e8808e1a5f">
+      <ID>HARDSHIP INDEX</ID>
+      <Name>HARDSHIP INDEX</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="d570db29-ebbe-44ab-875d-afeba5ae77b3">
+          <DataType>SmallInt</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="1993ab3e-4ec3-40e4-a135-a88b26b5761d">
+            <TableID>dbo_Dim_CommunityArea</TableID>
+            <ColumnID>HARDSHIP_x0020_INDEX</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+  </Attributes>
+  <ddl300:ProcessingState>Unprocessed</ddl300:ProcessingState>
+</Dimension>

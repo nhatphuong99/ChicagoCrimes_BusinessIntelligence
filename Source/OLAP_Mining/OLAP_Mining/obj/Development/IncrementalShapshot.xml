@@ -1,0 +1,110 @@
+﻿<DeploymentSnapshot xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ddl2="http://schemas.microsoft.com/analysisservices/2003/engine/2" xmlns:ddl2_2="http://schemas.microsoft.com/analysisservices/2003/engine/2/2" xmlns:ddl100_100="http://schemas.microsoft.com/analysisservices/2008/engine/100/100" xmlns:ddl200="http://schemas.microsoft.com/analysisservices/2010/engine/200" xmlns:ddl200_200="http://schemas.microsoft.com/analysisservices/2010/engine/200/200" xmlns:ddl300="http://schemas.microsoft.com/analysisservices/2011/engine/300" xmlns:ddl300_300="http://schemas.microsoft.com/analysisservices/2011/engine/300/300" xmlns:ddl400="http://schemas.microsoft.com/analysisservices/2012/engine/400" xmlns:ddl400_400="http://schemas.microsoft.com/analysisservices/2012/engine/400/400" xmlns:ddl500="http://schemas.microsoft.com/analysisservices/2013/engine/500" xmlns:ddl500_500="http://schemas.microsoft.com/analysisservices/2013/engine/500/500" xmlns:dwd="http://schemas.microsoft.com/DataWarehouse/Designer/1.0">
+  <Target>
+    <Database>OLAP_Mining</Database>
+    <Server>localhost</Server>
+    <ConnectionString>Data Source=localhost;Timeout=0</ConnectionString>
+  </Target>
+  <Options>
+    <TransactionalDeployment>false</TransactionalDeployment>
+    <PartitionDeployment>DeployPartitions</PartitionDeployment>
+    <RoleDeployment>DeployRolesRetainMembers</RoleDeployment>
+    <ProcessingOption>DoNotProcess</ProcessingOption>
+    <OutputScript></OutputScript>
+    <ImpactAnalysisFile></ImpactAnalysisFile>
+    <ConfigurationSettingsDeployment>Deploy</ConfigurationSettingsDeployment>
+    <OptimizationSettingsDeployment>Deploy</OptimizationSettingsDeployment>
+    <WriteBackTableCreation>UseExisting</WriteBackTableCreation>
+  </Options>
+  <Snapshot>
+    <ObjectSnapshots>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.RelationalDataSource</Type>
+        <TimeStamp>vUbtWuA4VkdPfxh/yUfil3NOpNo=12/15/2020 9:28:17 PM12/15/2020 9:28:17 PM</TimeStamp>
+        <ID>
+          <String>DDS Chicago Crime</String>
+        </ID>
+      </ObjectSnapshot>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.DataSourceView</Type>
+        <TimeStamp>JSpum+Zqd84/ApEi4YDbN0zi59o=1/5/2021 4:43:31 PM12/15/2020 9:28:27 PM</TimeStamp>
+        <ID>
+          <String>DDS Chicago Crime</String>
+        </ID>
+      </ObjectSnapshot>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.Dimension</Type>
+        <TimeStamp>4E8uCsbM6xpe9u8XuEQJbrvwTCk=12/15/2020 10:13:29 PM12/15/2020 9:28:44 PM</TimeStamp>
+        <ID>
+          <String>Dim IUCR</String>
+        </ID>
+      </ObjectSnapshot>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.Dimension</Type>
+        <TimeStamp>tdgs/qyUVWeEqZtXCKCEW9eMNhE=12/15/2020 9:53:31 PM12/15/2020 9:28:44 PM</TimeStamp>
+        <ID>
+          <String>Dim Date</String>
+        </ID>
+      </ObjectSnapshot>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.Dimension</Type>
+        <TimeStamp>vJvn6D9OP4iuQYkANe2Qfg8dDDY=12/15/2020 9:51:14 PM12/15/2020 9:28:44 PM</TimeStamp>
+        <ID>
+          <String>Dim Location</String>
+        </ID>
+      </ObjectSnapshot>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.Dimension</Type>
+        <TimeStamp>SSR5Fy4aPkmVJ8SzMa52We2h1QM=12/15/2020 9:51:27 PM12/15/2020 9:28:44 PM</TimeStamp>
+        <ID>
+          <String>Dim FBI Code</String>
+        </ID>
+      </ObjectSnapshot>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.Dimension</Type>
+        <TimeStamp>WhqUjjKEYFNNg5Yrq5nkb8SyvxQ=12/15/2020 9:52:01 PM12/15/2020 9:28:44 PM</TimeStamp>
+        <ID>
+          <String>Dim Community Area</String>
+        </ID>
+      </ObjectSnapshot>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.Dimension</Type>
+        <TimeStamp>z2kwrXScCxJaXirnjtwS38W+aaM=12/15/2020 9:52:29 PM12/15/2020 9:28:44 PM</TimeStamp>
+        <ID>
+          <String>Fact Crime</String>
+        </ID>
+      </ObjectSnapshot>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.Cube</Type>
+        <TimeStamp>oDf++ob2wBQCKk1PWvmfsAAt5P4=1/6/2021 4:15:51 PM12/15/2020 9:28:44 PM3o/z+AVkHatwZvXjFIhVyneaVGI=12/28/2020 11:35:06 AM12/15/2020 9:28:44 PM</TimeStamp>
+        <ID>
+          <String>DDS Chicago Crime</String>
+        </ID>
+      </ObjectSnapshot>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.MiningStructure</Type>
+        <TimeStamp>zkvzMMcUHBphf4VtryZAkLnyYLs=1/6/2021 10:17:55 PM1/5/2021 4:43:31 PM</TimeStamp>
+        <ID>
+          <String>v DM Theft</String>
+        </ID>
+      </ObjectSnapshot>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.MiningStructure</Type>
+        <TimeStamp>kFbwvSM7iRMelw0cwY5QHoLQDmw=1/6/2021 10:16:58 PM1/5/2021 4:53:51 PM</TimeStamp>
+        <ID>
+          <String>v DM Domestic</String>
+        </ID>
+      </ObjectSnapshot>
+    </ObjectSnapshots>
+    <DatabaseSnapshot>
+      <Type>Microsoft.AnalysisServices.Database</Type>
+      <TimeStamp>1SteZMvAD5mg+glXf/Q7llhK/us=12/13/2020 9:55:47 AM12/13/2020 9:55:46 AM</TimeStamp>
+      <ID>
+        <String>OLAP_Mining</String>
+      </ID>
+    </DatabaseSnapshot>
+    <Granularity>Coarse</Granularity>
+  </Snapshot>
+  <AssemblyLocations />
+  <ProcessingComplete>true</ProcessingComplete>
+  <LastDeployed>2021-01-06T15:18:00.416667Z</LastDeployed>
+</DeploymentSnapshot>

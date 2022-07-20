@@ -1,0 +1,284 @@
+﻿<Dimension xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ddl2="http://schemas.microsoft.com/analysisservices/2003/engine/2" xmlns:ddl2_2="http://schemas.microsoft.com/analysisservices/2003/engine/2/2" xmlns:ddl100_100="http://schemas.microsoft.com/analysisservices/2008/engine/100/100" xmlns:ddl200="http://schemas.microsoft.com/analysisservices/2010/engine/200" xmlns:ddl200_200="http://schemas.microsoft.com/analysisservices/2010/engine/200/200" xmlns:ddl300="http://schemas.microsoft.com/analysisservices/2011/engine/300" xmlns:ddl300_300="http://schemas.microsoft.com/analysisservices/2011/engine/300/300" xmlns:ddl400="http://schemas.microsoft.com/analysisservices/2012/engine/400" xmlns:ddl400_400="http://schemas.microsoft.com/analysisservices/2012/engine/400/400" xmlns:ddl500="http://schemas.microsoft.com/analysisservices/2013/engine/500" xmlns:ddl500_500="http://schemas.microsoft.com/analysisservices/2013/engine/500/500" xmlns:dwd="http://schemas.microsoft.com/DataWarehouse/Designer/1.0" dwd:design-time-name="f077fd5b-2ad2-461e-8267-94c7be9482f4" xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">
+  <ID>Fact Crime</ID>
+  <Name>Fact Crime</Name>
+  <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+  <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+  <Annotations>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramLayout</Name>
+      <Value>
+        <dds xmlns="">
+          <diagram fontclsid="{0BE35203-8F91-11CE-9DE3-00AA004BB851}" mouseiconclsid="{0BE35204-8F91-11CE-9DE3-00AA004BB851}" defaultlayout="MSDDS.Rectilinear" defaultlineroute="MSDDS.Rectilinear" version="7" nextobject="2" scale="100" pagebreakanchorx="0" pagebreakanchory="0" pagebreaksizex="0" pagebreaksizey="0" scrollleft="-1949" scrolltop="-5000" gridx="150" gridy="150" marginx="5000" marginy="5000" zoom="100" x="8170" y="12129" backcolor="2434342" defaultpersistence="2" PrintPageNumbersMode="3" PrintMarginTop="0" PrintMarginBottom="635" PrintMarginLeft="0" PrintMarginRight="0" marqueeselectionmode="0" mousepointer="0" snaptogrid="0" autotypeannotation="1" showscrollbars="0" viewpagebreaks="0" donotforceconnectorsbehindshapes="1" backpictureclsid="{00000000-0000-0000-0000-000000000000}">
+            <font>
+              <ddsxmlobjectstreamwrapper binary="010000009001b0300100065461686f6d61" />
+            </font>
+            <mouseicon>
+              <ddsxmlobjectstreamwrapper binary="6c74000000000000" />
+            </mouseicon>
+          </diagram>
+          <layoutmanager>
+            <ddsxmlobj />
+          </layoutmanager>
+          <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge" tooltip="Fact_Crime" left="-488" top="0" logicalid="1" controlid="1" masterid="0" hint1="0" hint2="0" width="4233" height="5000" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobjectstreaminitwrapper binary="000e00008910000088130000" />
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="dbo_Fact_Crime" vartype="8" />
+              </ddsxmlobj>
+            </layoutobject>
+            <shape groupshapeid="0" groupnode="0" />
+          </ddscontrol>
+        </dds>
+      </Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ShowFriendlyNames</Name>
+      <Value>true</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ShowRelationshipNames</Name>
+      <Value>false</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:UseDiagramDefaultLayout</Name>
+      <Value>true</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramViewPortLeft</Name>
+      <Value>-1949</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramViewPortTop</Name>
+      <Value>-5000</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramBoundingLeft</Name>
+      <Value>-488</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramBoundingTop</Name>
+      <Value>0</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramZoom</Name>
+      <Value>100</Value>
+    </Annotation>
+  </Annotations>
+  <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+  <State>Unprocessed</State>
+  <Source xsi:type="DataSourceViewBinding" dwd:design-time-name="0effeab3-b2b8-4e43-b188-694508e59ba5">
+    <DataSourceViewID>DDS Chicago Crime</DataSourceViewID>
+  </Source>
+  <ErrorConfiguration dwd:design-time-name="8f4ac6c5-bf4b-48ef-84ad-5c244a3895e6">
+    <KeyNotFound>ReportAndStop</KeyNotFound>
+    <KeyDuplicate>ReportAndStop</KeyDuplicate>
+    <NullKeyNotAllowed>ReportAndStop</NullKeyNotAllowed>
+  </ErrorConfiguration>
+  <CurrentStorageMode>Molap</CurrentStorageMode>
+  <Attributes>
+    <Attribute dwd:design-time-name="96167b17-bdf5-48da-9c62-392872a37bc5">
+      <ID>Crime Key</ID>
+      <Name>Crime Key</Name>
+      <Usage>Key</Usage>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="de84c0e9-6dfd-4fe4-938e-875232f58b8b">
+          <DataType>Integer</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="5e911340-dfad-4c0c-a865-4beba9f36012">
+            <TableID>dbo_Fact_Crime</TableID>
+            <ColumnID>CrimeKey</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <AttributeRelationships>
+        <AttributeRelationship dwd:design-time-name="99be558d-6b3c-490c-a3de-f47005d28c17">
+          <AttributeID>IUCR Key</AttributeID>
+          <Name>IUCR Key</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="6d24b82f-e48e-49e4-af16-3e69a4e20019">
+          <AttributeID>Date Key</AttributeID>
+          <Name>Date Key</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="de61d444-1c67-438d-9521-a2ffe468f3cf">
+          <AttributeID>Location Description Key</AttributeID>
+          <Name>Location Description Key</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="57767593-fd69-4102-afa5-dec4de032926">
+          <AttributeID>FBI Code Key</AttributeID>
+          <Name>FBI Code Key</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="cf07083d-a5c6-43cf-94b2-362e0d0e33b3">
+          <AttributeID>Community Area Key</AttributeID>
+          <Name>Community Area Key</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="e5f3c545-92b7-49d4-9206-774542881e65">
+          <AttributeID>Case Number</AttributeID>
+          <Name>Case Number</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="4bbb423e-2728-4e9a-822e-17aa6423c7af">
+          <AttributeID>Arrest</AttributeID>
+          <Name>Arrest</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="57dabe6c-d73d-4fc6-9c79-ef2a52ed1095">
+          <AttributeID>Domestic</AttributeID>
+          <Name>Domestic</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="216c97d6-e63f-4860-a6c3-088bcd7d22d6">
+          <AttributeID>Theft</AttributeID>
+          <Name>Theft</Name>
+        </AttributeRelationship>
+      </AttributeRelationships>
+      <OrderBy>Key</OrderBy>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="112cfb19-8545-42b1-b347-39e481d7be6c">
+      <ID>IUCR Key</ID>
+      <Name>IUCR Key</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="98301375-a614-4d55-bb63-d9d5c71cd276">
+          <DataType>Integer</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="9abe1365-47a5-4558-a52a-9a4f4470a19d">
+            <TableID>dbo_Fact_Crime</TableID>
+            <ColumnID>IUCRKey</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <OrderBy>Key</OrderBy>
+      <AttributeHierarchyVisible>false</AttributeHierarchyVisible>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="c1c4ca74-39be-4454-9f74-0eca456b41ba">
+      <ID>Date Key</ID>
+      <Name>Date Key</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="4516cb14-83ec-4cb7-b9a2-3696475b8d92">
+          <DataType>Integer</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="685acda9-5385-44f7-8c39-37ee31767c9f">
+            <TableID>dbo_Fact_Crime</TableID>
+            <ColumnID>DateKey</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <OrderBy>Key</OrderBy>
+      <AttributeHierarchyVisible>false</AttributeHierarchyVisible>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="4e606c42-0de0-4c88-94bc-82e3e3c21a41">
+      <ID>Location Description Key</ID>
+      <Name>Location Description Key</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="6f44478a-d93b-4a73-a0ea-b71a380c0d8b">
+          <DataType>Integer</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="1cb49896-0e4d-4d9a-a3dd-aabe906a7a45">
+            <TableID>dbo_Fact_Crime</TableID>
+            <ColumnID>LocationDescriptionKey</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <OrderBy>Key</OrderBy>
+      <AttributeHierarchyVisible>false</AttributeHierarchyVisible>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="1134be06-7b10-40e6-9c8b-3ca798542afb">
+      <ID>FBI Code Key</ID>
+      <Name>FBI Code Key</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="28efb636-63a1-47b2-8c11-9d10f3f528dd">
+          <DataType>Integer</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="e153a394-2989-4fe2-b7f8-f7a63f61e9a1">
+            <TableID>dbo_Fact_Crime</TableID>
+            <ColumnID>FBICodeKey</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <OrderBy>Key</OrderBy>
+      <AttributeHierarchyVisible>false</AttributeHierarchyVisible>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="84207013-3550-47f2-a138-6a81814871f4">
+      <ID>Community Area Key</ID>
+      <Name>Community Area Key</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="a997e9fd-a28d-4500-aa71-2e533ad85684">
+          <DataType>Integer</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="1037e6fa-cc80-4b71-b269-2fba1f887a07">
+            <TableID>dbo_Fact_Crime</TableID>
+            <ColumnID>CommunityAreaKey</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <OrderBy>Key</OrderBy>
+      <AttributeHierarchyVisible>false</AttributeHierarchyVisible>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="84855647-f047-470b-98c3-2b766767b22d">
+      <ID>Case Number</ID>
+      <Name>Case Number</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="9cd79989-860a-4e8e-b5b0-c67476f694d5">
+          <DataType>WChar</DataType>
+          <DataSize>10</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="faa41223-5014-43b9-b6cd-6be8e1752b9d">
+            <TableID>dbo_Fact_Crime</TableID>
+            <ColumnID>Case_x0020_Number</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="60f8ea2b-ef69-4cb6-a2ae-03ad3f10b87b">
+      <ID>Arrest</ID>
+      <Name>Arrest</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="99fc9501-a38c-4707-bd90-db6f2d9e5cb9">
+          <DataType>Boolean</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="7807fb46-ebd3-4e43-8e40-dd93cff9e4fa">
+            <TableID>dbo_Fact_Crime</TableID>
+            <ColumnID>Arrest</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="945ec571-8df1-4fa5-b32d-c2ccc45d8e23">
+      <ID>Domestic</ID>
+      <Name>Domestic</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="20652b5e-8941-4cdb-bc9a-6e716aa87102">
+          <DataType>Boolean</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="76b75a0c-c6ed-4527-97c0-5c8d9d92c242">
+            <TableID>dbo_Fact_Crime</TableID>
+            <ColumnID>Domestic</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="e6e4ed19-249a-4c60-8aaa-0b0bedf1970a">
+      <ID>Theft</ID>
+      <Name>Theft</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="59a69ea0-bd81-4475-ae9e-eb2314dac11f">
+          <DataType>Boolean</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="f1953075-524d-4725-8810-f5075a502cd8">
+            <TableID>dbo_Fact_Crime</TableID>
+            <ColumnID>Theft</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+  </Attributes>
+  <ddl300:ProcessingState>Unprocessed</ddl300:ProcessingState>
+</Dimension>

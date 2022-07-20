@@ -1,0 +1,14 @@
+select non empty [Dim Date].[Hierarchy].[Year] on columns,
+non empty [Dim IUCR].[Primary Type].members on rows
+from [DDS Chicago Crime]
+
+
+select non empty [Dim Date].[Hierarchy].[Year] on columns,
+non empty [Dim Location].[Location Description Name].children on rows
+from [DDS Chicago Crime]
+
+
+select {[Dim Community Area].[PERCENT AGED 16 UNEMPLOYED]
+, [Dim Community Area].[PERCENT AGED 25 WITHOUT HIGH SCHOOL DIPLOMA]
+from [DDS Chicago Crime]
+ 

@@ -1,0 +1,2455 @@
+<?xml version="1.0"?>
+<DTS:Executable xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:refId="Package"
+  DTS:CreationDate="11/6/2020 8:53:17 PM"
+  DTS:CreationName="Microsoft.Package"
+  DTS:CreatorComputerName="DESKTOP-4CE5DEQ"
+  DTS:CreatorName="DESKTOP-4CE5DEQ\Predator"
+  DTS:DTSID="{3EB64836-7A73-479A-BA9A-110138DE5120}"
+  DTS:ExecutableType="Microsoft.Package"
+  DTS:LastModifiedProductVersion="15.0.2000.132"
+  DTS:LocaleID="1033"
+  DTS:ObjectName="Package"
+  DTS:PackageType="5"
+  DTS:VersionBuild="45"
+  DTS:VersionGUID="{12DA36E0-415B-40E4-9CB8-AB5188995D4A}">
+  <DTS:Property
+    DTS:Name="PackageFormatVersion">8</DTS:Property>
+  <DTS:ConnectionManagers>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[Census]"
+      DTS:CreationName="FLATFILE"
+      DTS:DTSID="{EB93E392-965D-421B-903F-03B310CE7970}"
+      DTS:ObjectName="Census">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:Format="Delimited"
+          DTS:LocaleID="1033"
+          DTS:HeaderRowDelimiter="_x000D__x000A_"
+          DTS:ColumnNamesInFirstDataRow="True"
+          DTS:RowDelimiter=""
+          DTS:TextQualifier="_x003C_none_x003E_"
+          DTS:CodePage="1252"
+          DTS:ConnectionString="D:\LONG\LEARNING\Y4\Term1\BI\Project_Crime\Data set\Census_Data_-_Selected_socioeconomic_indicators_in_Chicago__2008___2012.csv">
+          <DTS:FlatFileColumns>
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="16"
+              DTS:TextQualified="True"
+              DTS:ObjectName="[Community Area Number]"
+              DTS:DTSID="{4BD33A2C-CC5D-49BA-9B77-777CBB352ADA}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="200"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="[COMMUNITY AREA NAME]"
+              DTS:DTSID="{84135C1D-FAB3-4531-AD60-5A9665B59B77}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="4"
+              DTS:TextQualified="True"
+              DTS:ObjectName="[PERCENT OF HOUSING CROWDED]"
+              DTS:DTSID="{67CB4EBA-A59C-4AA7-9575-962A1168AC73}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="4"
+              DTS:TextQualified="True"
+              DTS:ObjectName="[PERCENT HOUSEHOLDS BELOW POVERTY]"
+              DTS:DTSID="{1A9D5827-67AF-464E-8041-A08F946703D2}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="4"
+              DTS:TextQualified="True"
+              DTS:ObjectName="[PERCENT AGED 16+ UNEMPLOYED]"
+              DTS:DTSID="{EDCCBF28-51E7-4226-856D-DD21B190515D}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="4"
+              DTS:TextQualified="True"
+              DTS:ObjectName="[PERCENT AGED 25+ WITHOUT HIGH SCHOOL DIPLOMA]"
+              DTS:DTSID="{D3ECDFC1-3979-421A-8014-F88DF6EFD181}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="4"
+              DTS:TextQualified="True"
+              DTS:ObjectName="[PERCENT AGED UNDER 18 OR OVER 64]"
+              DTS:DTSID="{22E6A994-B7DF-4C2E-B55E-6E989A2F5E61}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="3"
+              DTS:TextQualified="True"
+              DTS:ObjectName="[PER CAPITA INCOME]"
+              DTS:DTSID="{CEFE47CE-9237-4194-81EB-FB92EF8E3388}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x000D__x000A_"
+              DTS:DataType="16"
+              DTS:TextQualified="True"
+              DTS:ObjectName="[HARDSHIP INDEX]"
+              DTS:DTSID="{DDDE737C-3FFE-408A-84FF-8F3ECF5132D4}"
+              DTS:CreationName="" />
+          </DTS:FlatFileColumns>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[Crime 2012-2017]"
+      DTS:CreationName="FLATFILE"
+      DTS:DTSID="{4461202B-C9A6-4C5F-A2D4-46560F060358}"
+      DTS:ObjectName="Crime 2012-2017">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:Format="Delimited"
+          DTS:LocaleID="1033"
+          DTS:HeaderRowDelimiter="_x000D__x000A_"
+          DTS:ColumnNamesInFirstDataRow="True"
+          DTS:RowDelimiter=""
+          DTS:TextQualifier="_x0022_"
+          DTS:CodePage="1252"
+          DTS:ConnectionString="D:\LONG\LEARNING\Y4\Term1\BI\Project_Crime\Data set\Chicago_Crimes_2012_to_2017.csv">
+          <DTS:FlatFileColumns>
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="3"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Column 0"
+              DTS:DTSID="{28659990-63D5-4B43-B95F-4F2C76D17B45}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="3"
+              DTS:TextQualified="True"
+              DTS:ObjectName="ID"
+              DTS:DTSID="{01FE5381-D916-436E-A15A-7FC54E3B30E4}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="10"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Case Number"
+              DTS:DTSID="{6EF1274D-5C79-46B3-B668-FE479FF96B85}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="7"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Date"
+              DTS:DTSID="{79C5ACFB-48F4-46A1-8675-BB664930C35B}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Block"
+              DTS:DTSID="{FA9E0FE4-2533-4B42-A6C4-9B1F792A91A0}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="10"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="IUCR"
+              DTS:DTSID="{DB87302B-FE32-4705-926C-A77988220CA8}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Primary Type"
+              DTS:DTSID="{3B962D22-C50A-4433-84E6-25B79E1F87DF}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="100"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Description"
+              DTS:DTSID="{D6E75C9D-5FDF-41A7-8B6E-0D67EA9E4B20}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="100"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Location Description"
+              DTS:DTSID="{804D745F-2F07-4CAE-984F-7EEFAA6EED1E}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="11"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Arrest"
+              DTS:DTSID="{15D4106D-91AE-4927-9BB7-8D87E30F5138}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="11"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Domestic"
+              DTS:DTSID="{494FF331-F6AF-466B-8E5C-09EF2F89DE3A}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="2"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Beat"
+              DTS:DTSID="{89EE3DB7-7D90-4333-93AB-3ABF74B8989F}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="4"
+              DTS:TextQualified="True"
+              DTS:ObjectName="District"
+              DTS:DTSID="{CB6A5F8F-9C09-4479-86F5-453A50EF558C}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="4"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Ward"
+              DTS:DTSID="{4BA6826F-A713-4AD6-B52E-1872593BCF4B}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="4"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Community Area"
+              DTS:DTSID="{A68A60CB-9344-466E-83F7-7F3A4A78D1CD}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="5"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="FBI Code"
+              DTS:DTSID="{1D46B5B5-DA98-4B71-94DE-021612899797}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="4"
+              DTS:TextQualified="True"
+              DTS:ObjectName="X Coordinate"
+              DTS:DTSID="{43260939-50F7-4774-8F36-A641A19B5194}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="4"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Y Coordinate"
+              DTS:DTSID="{442AFD4E-9C82-4773-8C83-0EDA3F3401A0}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="2"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Year"
+              DTS:DTSID="{63F91FBC-FE5E-4477-A049-2584F226F1F4}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="7"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Updated On"
+              DTS:DTSID="{EF9E182D-8C48-4E8F-B0C2-67BCBEB5492A}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="4"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Latitude"
+              DTS:DTSID="{44D095ED-A0A4-4218-AFEB-74EF446EBAFA}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="4"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Longitude"
+              DTS:DTSID="{CEE859EA-D8D4-48DE-8494-7E8E32232E9E}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x000A_"
+              DTS:MaximumWidth="100"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Location"
+              DTS:DTSID="{130AAE9E-9821-4E84-8996-79F1FEFAFBCC}"
+              DTS:CreationName="" />
+          </DTS:FlatFileColumns>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[Excel Connection Manager]"
+      DTS:CreationName="EXCEL"
+      DTS:DTSID="{07EA83D2-DAD7-4347-8A05-5A0F8CFEE123}"
+      DTS:ObjectName="Excel Connection Manager">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectionString="Provider=Microsoft.ACE.OLEDB.16.0;Data Source=D:\LONG\LEARNING\Y4\Term1\BI\Project_Crime\Data set\Census.xlsx;Extended Properties=&quot;EXCEL 12.0 XML;HDR=YES&quot;;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[FBI Code]"
+      DTS:CreationName="FLATFILE"
+      DTS:DTSID="{E26B8792-AEFA-4458-B124-0D6C31208910}"
+      DTS:ObjectName="FBI Code">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:Format="Delimited"
+          DTS:LocaleID="1033"
+          DTS:HeaderRowDelimiter="_x000D__x000A_"
+          DTS:ColumnNamesInFirstDataRow="True"
+          DTS:RowDelimiter=""
+          DTS:TextQualifier="_x0022_"
+          DTS:CodePage="1252"
+          DTS:ConnectionString="D:\LONG\LEARNING\Y4\Term1\BI\Project_Crime\Data set\FBI-Categories-Code.csv">
+          <DTS:FlatFileColumns>
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="3"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Code"
+              DTS:DTSID="{6DC6F071-A5E2-47DF-9586-E5C7B1FA20EE}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="25"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Categories"
+              DTS:DTSID="{CE5A8997-D414-4070-BD7D-BF7C0C5C60C6}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x000D__x000A_"
+              DTS:MaximumWidth="360"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Definition"
+              DTS:DTSID="{EF6942FA-89B7-4528-8A65-A13C195955FC}"
+              DTS:CreationName="" />
+          </DTS:FlatFileColumns>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+  </DTS:ConnectionManagers>
+  <DTS:Variables />
+  <DTS:Executables>
+    <DTS:Executable
+      DTS:refId="Package\Census"
+      DTS:CreationName="Microsoft.Pipeline"
+      DTS:Description="Data Flow Task"
+      DTS:DTSID="{90B49550-1B72-4313-A881-97447D67AEAB}"
+      DTS:ExecutableType="Microsoft.Pipeline"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Census"
+      DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <pipeline
+          version="1">
+          <components>
+            <component
+              refId="Package\Census\Flat File Source"
+              componentClassID="Microsoft.FlatFileSource"
+              contactInfo="Flat File Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
+              description="Flat File Source"
+              localeId="1033"
+              name="Flat File Source"
+              usesDispositions="true"
+              version="1">
+              <properties>
+                <property
+                  dataType="System.Boolean"
+                  description="Specifies whether zero-length columns are treated as null."
+                  name="RetainNulls">false</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of an output column containing the file name. If no name is specified, no output column containing the file name will be generated."
+                  name="FileNameColumnName"></property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Census\Flat File Source.Connections[FlatFileConnection]"
+                  connectionManagerID="Package.ConnectionManagers[Census]"
+                  connectionManagerRefId="Package.ConnectionManagers[Census]"
+                  name="FlatFileConnection" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\Census\Flat File Source.Outputs[Flat File Source Output]"
+                  name="Flat File Source Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Census\Flat File Source.Outputs[Flat File Source Output].Columns[[Community Area Number]]"
+                      dataType="i1"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Census\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[[Community Area Number]]"
+                      lineageId="Package\Census\Flat File Source.Outputs[Flat File Source Output].Columns[[Community Area Number]]"
+                      name="[Community Area Number]"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Census\Flat File Source.Outputs[Flat File Source Output].Columns[[COMMUNITY AREA NAME]]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Census\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[[COMMUNITY AREA NAME]]"
+                      length="200"
+                      lineageId="Package\Census\Flat File Source.Outputs[Flat File Source Output].Columns[[COMMUNITY AREA NAME]]"
+                      name="[COMMUNITY AREA NAME]"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Census\Flat File Source.Outputs[Flat File Source Output].Columns[[PERCENT OF HOUSING CROWDED]]"
+                      dataType="r4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Census\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[[PERCENT OF HOUSING CROWDED]]"
+                      lineageId="Package\Census\Flat File Source.Outputs[Flat File Source Output].Columns[[PERCENT OF HOUSING CROWDED]]"
+                      name="[PERCENT OF HOUSING CROWDED]"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Census\Flat File Source.Outputs[Flat File Source Output].Columns[[PERCENT HOUSEHOLDS BELOW POVERTY]]"
+                      dataType="r4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Census\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[[PERCENT HOUSEHOLDS BELOW POVERTY]]"
+                      lineageId="Package\Census\Flat File Source.Outputs[Flat File Source Output].Columns[[PERCENT HOUSEHOLDS BELOW POVERTY]]"
+                      name="[PERCENT HOUSEHOLDS BELOW POVERTY]"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Census\Flat File Source.Outputs[Flat File Source Output].Columns[[PERCENT AGED 16+ UNEMPLOYED]]"
+                      dataType="r4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Census\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[[PERCENT AGED 16+ UNEMPLOYED]]"
+                      lineageId="Package\Census\Flat File Source.Outputs[Flat File Source Output].Columns[[PERCENT AGED 16+ UNEMPLOYED]]"
+                      name="[PERCENT AGED 16+ UNEMPLOYED]"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Census\Flat File Source.Outputs[Flat File Source Output].Columns[[PERCENT AGED 25+ WITHOUT HIGH SCHOOL DIPLOMA]]"
+                      dataType="r4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Census\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[[PERCENT AGED 25+ WITHOUT HIGH SCHOOL DIPLOMA]]"
+                      lineageId="Package\Census\Flat File Source.Outputs[Flat File Source Output].Columns[[PERCENT AGED 25+ WITHOUT HIGH SCHOOL DIPLOMA]]"
+                      name="[PERCENT AGED 25+ WITHOUT HIGH SCHOOL DIPLOMA]"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Census\Flat File Source.Outputs[Flat File Source Output].Columns[[PERCENT AGED UNDER 18 OR OVER 64]]"
+                      dataType="r4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Census\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[[PERCENT AGED UNDER 18 OR OVER 64]]"
+                      lineageId="Package\Census\Flat File Source.Outputs[Flat File Source Output].Columns[[PERCENT AGED UNDER 18 OR OVER 64]]"
+                      name="[PERCENT AGED UNDER 18 OR OVER 64]"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Census\Flat File Source.Outputs[Flat File Source Output].Columns[[PER CAPITA INCOME]]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Census\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[[PER CAPITA INCOME]]"
+                      lineageId="Package\Census\Flat File Source.Outputs[Flat File Source Output].Columns[[PER CAPITA INCOME]]"
+                      name="[PER CAPITA INCOME]"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Census\Flat File Source.Outputs[Flat File Source Output].Columns[[HARDSHIP INDEX]]"
+                      dataType="i1"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Census\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[[HARDSHIP INDEX]]"
+                      lineageId="Package\Census\Flat File Source.Outputs[Flat File Source Output].Columns[[HARDSHIP INDEX]]"
+                      name="[HARDSHIP INDEX]"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Census\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[[Community Area Number]]"
+                      dataType="i1"
+                      name="[Community Area Number]" />
+                    <externalMetadataColumn
+                      refId="Package\Census\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[[COMMUNITY AREA NAME]]"
+                      codePage="1252"
+                      dataType="str"
+                      length="200"
+                      name="[COMMUNITY AREA NAME]" />
+                    <externalMetadataColumn
+                      refId="Package\Census\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[[PERCENT OF HOUSING CROWDED]]"
+                      dataType="r4"
+                      name="[PERCENT OF HOUSING CROWDED]" />
+                    <externalMetadataColumn
+                      refId="Package\Census\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[[PERCENT HOUSEHOLDS BELOW POVERTY]]"
+                      dataType="r4"
+                      name="[PERCENT HOUSEHOLDS BELOW POVERTY]" />
+                    <externalMetadataColumn
+                      refId="Package\Census\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[[PERCENT AGED 16+ UNEMPLOYED]]"
+                      dataType="r4"
+                      name="[PERCENT AGED 16+ UNEMPLOYED]" />
+                    <externalMetadataColumn
+                      refId="Package\Census\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[[PERCENT AGED 25+ WITHOUT HIGH SCHOOL DIPLOMA]]"
+                      dataType="r4"
+                      name="[PERCENT AGED 25+ WITHOUT HIGH SCHOOL DIPLOMA]" />
+                    <externalMetadataColumn
+                      refId="Package\Census\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[[PERCENT AGED UNDER 18 OR OVER 64]]"
+                      dataType="r4"
+                      name="[PERCENT AGED UNDER 18 OR OVER 64]" />
+                    <externalMetadataColumn
+                      refId="Package\Census\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[[PER CAPITA INCOME]]"
+                      dataType="i4"
+                      name="[PER CAPITA INCOME]" />
+                    <externalMetadataColumn
+                      refId="Package\Census\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[[HARDSHIP INDEX]]"
+                      dataType="i1"
+                      name="[HARDSHIP INDEX]" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\Census\Flat File Source.Outputs[Flat File Source Error Output]"
+                  isErrorOut="true"
+                  name="Flat File Source Error Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Census\Flat File Source.Outputs[Flat File Source Error Output].Columns[Flat File Source Error Output Column]"
+                      codePage="65001"
+                      dataType="text"
+                      description="Flat File Source Error Output Column"
+                      lineageId="Package\Census\Flat File Source.Outputs[Flat File Source Error Output].Columns[Flat File Source Error Output Column]"
+                      name="Flat File Source Error Output Column" />
+                    <outputColumn
+                      refId="Package\Census\Flat File Source.Outputs[Flat File Source Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Census\Flat File Source.Outputs[Flat File Source Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Census\Flat File Source.Outputs[Flat File Source Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Census\Flat File Source.Outputs[Flat File Source Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Census\OLE DB Destination"
+              componentClassID="Microsoft.OLEDBDestination"
+              contactInfo="OLE DB Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4"
+              description="OLE DB Destination"
+              name="OLE DB Destination"
+              usesDispositions="true"
+              version="4">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset">[Census]</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Forces the use of the DefaultCodePage property value when describing character data."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">0</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the values supplied for identity columns will be copied to the destination. If false, values for identity columns will be auto-generated at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepIdentity">false</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the columns containing null will have null inserted in the destination. If false, columns containing null will have their default values inserted at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepNulls">false</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies options to be used with fast load.  Applies only if fast load is turned on."
+                  name="FastLoadOptions"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies when commits are issued during data insertion.  A value of 0 specifies that one commit will be issued at the end of data insertion.  Applies only if fast load is turned on."
+                  name="FastLoadMaxInsertCommitSize">2147483647</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Census\OLE DB Destination.Connections[OleDbConnection]"
+                  connectionManagerID="{081DF74D-F03C-4F3B-9EDE-4A76DE1B9A55}:external"
+                  connectionManagerRefId="Project.ConnectionManagers[LAPTOP-LONG-LY.Chicago_Crime]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\Census\OLE DB Destination.Inputs[OLE DB Destination Input]"
+                  errorOrTruncationOperation="Insert"
+                  errorRowDisposition="FailComponent"
+                  hasSideEffects="true"
+                  name="OLE DB Destination Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Census\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[[Community Area Number]]"
+                      cachedDataType="i1"
+                      cachedName="[Community Area Number]"
+                      externalMetadataColumnId="Package\Census\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Community Area Number]"
+                      lineageId="Package\Census\Flat File Source.Outputs[Flat File Source Output].Columns[[Community Area Number]]" />
+                    <inputColumn
+                      refId="Package\Census\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[[COMMUNITY AREA NAME]]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="200"
+                      cachedName="[COMMUNITY AREA NAME]"
+                      externalMetadataColumnId="Package\Census\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[COMMUNITY AREA NAME]"
+                      lineageId="Package\Census\Flat File Source.Outputs[Flat File Source Output].Columns[[COMMUNITY AREA NAME]]" />
+                    <inputColumn
+                      refId="Package\Census\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[[PERCENT OF HOUSING CROWDED]]"
+                      cachedDataType="r4"
+                      cachedName="[PERCENT OF HOUSING CROWDED]"
+                      externalMetadataColumnId="Package\Census\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[PERCENT OF HOUSING CROWDED]"
+                      lineageId="Package\Census\Flat File Source.Outputs[Flat File Source Output].Columns[[PERCENT OF HOUSING CROWDED]]" />
+                    <inputColumn
+                      refId="Package\Census\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[[PERCENT HOUSEHOLDS BELOW POVERTY]]"
+                      cachedDataType="r4"
+                      cachedName="[PERCENT HOUSEHOLDS BELOW POVERTY]"
+                      externalMetadataColumnId="Package\Census\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[PERCENT HOUSEHOLDS BELOW POVERTY]"
+                      lineageId="Package\Census\Flat File Source.Outputs[Flat File Source Output].Columns[[PERCENT HOUSEHOLDS BELOW POVERTY]]" />
+                    <inputColumn
+                      refId="Package\Census\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[[PERCENT AGED 16+ UNEMPLOYED]]"
+                      cachedDataType="r4"
+                      cachedName="[PERCENT AGED 16+ UNEMPLOYED]"
+                      externalMetadataColumnId="Package\Census\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[PERCENT AGED 16+ UNEMPLOYED]"
+                      lineageId="Package\Census\Flat File Source.Outputs[Flat File Source Output].Columns[[PERCENT AGED 16+ UNEMPLOYED]]" />
+                    <inputColumn
+                      refId="Package\Census\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[[PERCENT AGED 25+ WITHOUT HIGH SCHOOL DIPLOMA]]"
+                      cachedDataType="r4"
+                      cachedName="[PERCENT AGED 25+ WITHOUT HIGH SCHOOL DIPLOMA]"
+                      externalMetadataColumnId="Package\Census\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[PERCENT AGED 25+ WITHOUT HIGH SCHOOL DIPLOMA]"
+                      lineageId="Package\Census\Flat File Source.Outputs[Flat File Source Output].Columns[[PERCENT AGED 25+ WITHOUT HIGH SCHOOL DIPLOMA]]" />
+                    <inputColumn
+                      refId="Package\Census\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[[PERCENT AGED UNDER 18 OR OVER 64]]"
+                      cachedDataType="r4"
+                      cachedName="[PERCENT AGED UNDER 18 OR OVER 64]"
+                      externalMetadataColumnId="Package\Census\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[PERCENT AGED UNDER 18 OR OVER 64]"
+                      lineageId="Package\Census\Flat File Source.Outputs[Flat File Source Output].Columns[[PERCENT AGED UNDER 18 OR OVER 64]]" />
+                    <inputColumn
+                      refId="Package\Census\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[[PER CAPITA INCOME]]"
+                      cachedDataType="i4"
+                      cachedName="[PER CAPITA INCOME]"
+                      externalMetadataColumnId="Package\Census\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[PER CAPITA INCOME]"
+                      lineageId="Package\Census\Flat File Source.Outputs[Flat File Source Output].Columns[[PER CAPITA INCOME]]" />
+                    <inputColumn
+                      refId="Package\Census\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[[HARDSHIP INDEX]]"
+                      cachedDataType="i1"
+                      cachedName="[HARDSHIP INDEX]"
+                      externalMetadataColumnId="Package\Census\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[HARDSHIP INDEX]"
+                      lineageId="Package\Census\Flat File Source.Outputs[Flat File Source Output].Columns[[HARDSHIP INDEX]]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Census\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Community Area Number]"
+                      dataType="i2"
+                      name="Community Area Number" />
+                    <externalMetadataColumn
+                      refId="Package\Census\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[COMMUNITY AREA NAME]"
+                      codePage="1252"
+                      dataType="str"
+                      length="200"
+                      name="COMMUNITY AREA NAME" />
+                    <externalMetadataColumn
+                      refId="Package\Census\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[PERCENT OF HOUSING CROWDED]"
+                      dataType="r4"
+                      name="PERCENT OF HOUSING CROWDED" />
+                    <externalMetadataColumn
+                      refId="Package\Census\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[PERCENT HOUSEHOLDS BELOW POVERTY]"
+                      dataType="r4"
+                      name="PERCENT HOUSEHOLDS BELOW POVERTY" />
+                    <externalMetadataColumn
+                      refId="Package\Census\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[PERCENT AGED 16+ UNEMPLOYED]"
+                      dataType="r4"
+                      name="PERCENT AGED 16+ UNEMPLOYED" />
+                    <externalMetadataColumn
+                      refId="Package\Census\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[PERCENT AGED 25+ WITHOUT HIGH SCHOOL DIPLOMA]"
+                      dataType="r4"
+                      name="PERCENT AGED 25+ WITHOUT HIGH SCHOOL DIPLOMA" />
+                    <externalMetadataColumn
+                      refId="Package\Census\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[PERCENT AGED UNDER 18 OR OVER 64]"
+                      dataType="r4"
+                      name="PERCENT AGED UNDER 18 OR OVER 64" />
+                    <externalMetadataColumn
+                      refId="Package\Census\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[PER CAPITA INCOME]"
+                      dataType="i4"
+                      name="PER CAPITA INCOME" />
+                    <externalMetadataColumn
+                      refId="Package\Census\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[HARDSHIP INDEX]"
+                      dataType="i2"
+                      name="HARDSHIP INDEX" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Census\OLE DB Destination.Outputs[OLE DB Destination Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="OLE DB Destination Error Output"
+                  synchronousInputId="Package\Census\OLE DB Destination.Inputs[OLE DB Destination Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Census\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Census\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Census\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Census\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+          </components>
+          <paths>
+            <path
+              refId="Package\Census.Paths[Flat File Source Output]"
+              endId="Package\Census\OLE DB Destination.Inputs[OLE DB Destination Input]"
+              name="Flat File Source Output"
+              startId="Package\Census\Flat File Source.Outputs[Flat File Source Output]" />
+          </paths>
+        </pipeline>
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\Crime Data"
+      DTS:CreationName="Microsoft.Pipeline"
+      DTS:Description="Data Flow Task"
+      DTS:DTSID="{408878FB-43CD-4795-BF85-811F167EF502}"
+      DTS:ExecutableType="Microsoft.Pipeline"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Crime Data"
+      DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <pipeline
+          version="1">
+          <components>
+            <component
+              refId="Package\Crime Data\Flat File Source"
+              componentClassID="Microsoft.FlatFileSource"
+              contactInfo="Flat File Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
+              description="Flat File Source"
+              localeId="1033"
+              name="Flat File Source"
+              usesDispositions="true"
+              version="1">
+              <properties>
+                <property
+                  dataType="System.Boolean"
+                  description="Specifies whether zero-length columns are treated as null."
+                  name="RetainNulls">false</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of an output column containing the file name. If no name is specified, no output column containing the file name will be generated."
+                  name="FileNameColumnName"></property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Crime Data\Flat File Source.Connections[FlatFileConnection]"
+                  connectionManagerID="Package.ConnectionManagers[Crime 2012-2017]"
+                  connectionManagerRefId="Package.ConnectionManagers[Crime 2012-2017]"
+                  name="FlatFileConnection" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\Crime Data\Flat File Source.Outputs[Flat File Source Output]"
+                  name="Flat File Source Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Crime Data\Flat File Source.Outputs[Flat File Source Output].Columns[Column 0]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Crime Data\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Column 0]"
+                      lineageId="Package\Crime Data\Flat File Source.Outputs[Flat File Source Output].Columns[Column 0]"
+                      name="Column 0"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Crime Data\Flat File Source.Outputs[Flat File Source Output].Columns[ID]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Crime Data\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[ID]"
+                      lineageId="Package\Crime Data\Flat File Source.Outputs[Flat File Source Output].Columns[ID]"
+                      name="ID"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Crime Data\Flat File Source.Outputs[Flat File Source Output].Columns[Case Number]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Crime Data\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Case Number]"
+                      length="10"
+                      lineageId="Package\Crime Data\Flat File Source.Outputs[Flat File Source Output].Columns[Case Number]"
+                      name="Case Number"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Crime Data\Flat File Source.Outputs[Flat File Source Output].Columns[Date]"
+                      dataType="date"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Crime Data\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Date]"
+                      lineageId="Package\Crime Data\Flat File Source.Outputs[Flat File Source Output].Columns[Date]"
+                      name="Date"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Crime Data\Flat File Source.Outputs[Flat File Source Output].Columns[Block]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Crime Data\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Block]"
+                      length="50"
+                      lineageId="Package\Crime Data\Flat File Source.Outputs[Flat File Source Output].Columns[Block]"
+                      name="Block"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Crime Data\Flat File Source.Outputs[Flat File Source Output].Columns[IUCR]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Crime Data\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[IUCR]"
+                      length="10"
+                      lineageId="Package\Crime Data\Flat File Source.Outputs[Flat File Source Output].Columns[IUCR]"
+                      name="IUCR"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Crime Data\Flat File Source.Outputs[Flat File Source Output].Columns[Primary Type]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Crime Data\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Primary Type]"
+                      length="50"
+                      lineageId="Package\Crime Data\Flat File Source.Outputs[Flat File Source Output].Columns[Primary Type]"
+                      name="Primary Type"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Crime Data\Flat File Source.Outputs[Flat File Source Output].Columns[Description]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Crime Data\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Description]"
+                      length="100"
+                      lineageId="Package\Crime Data\Flat File Source.Outputs[Flat File Source Output].Columns[Description]"
+                      name="Description"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Crime Data\Flat File Source.Outputs[Flat File Source Output].Columns[Location Description]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Crime Data\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Location Description]"
+                      length="100"
+                      lineageId="Package\Crime Data\Flat File Source.Outputs[Flat File Source Output].Columns[Location Description]"
+                      name="Location Description"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Crime Data\Flat File Source.Outputs[Flat File Source Output].Columns[Arrest]"
+                      dataType="bool"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Crime Data\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Arrest]"
+                      lineageId="Package\Crime Data\Flat File Source.Outputs[Flat File Source Output].Columns[Arrest]"
+                      name="Arrest"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Crime Data\Flat File Source.Outputs[Flat File Source Output].Columns[Domestic]"
+                      dataType="bool"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Crime Data\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Domestic]"
+                      lineageId="Package\Crime Data\Flat File Source.Outputs[Flat File Source Output].Columns[Domestic]"
+                      name="Domestic"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Crime Data\Flat File Source.Outputs[Flat File Source Output].Columns[Beat]"
+                      dataType="i2"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Crime Data\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Beat]"
+                      lineageId="Package\Crime Data\Flat File Source.Outputs[Flat File Source Output].Columns[Beat]"
+                      name="Beat"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Crime Data\Flat File Source.Outputs[Flat File Source Output].Columns[District]"
+                      dataType="r4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Crime Data\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[District]"
+                      lineageId="Package\Crime Data\Flat File Source.Outputs[Flat File Source Output].Columns[District]"
+                      name="District"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Crime Data\Flat File Source.Outputs[Flat File Source Output].Columns[Ward]"
+                      dataType="r4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Crime Data\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Ward]"
+                      lineageId="Package\Crime Data\Flat File Source.Outputs[Flat File Source Output].Columns[Ward]"
+                      name="Ward"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Crime Data\Flat File Source.Outputs[Flat File Source Output].Columns[Community Area]"
+                      dataType="r4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Crime Data\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Community Area]"
+                      lineageId="Package\Crime Data\Flat File Source.Outputs[Flat File Source Output].Columns[Community Area]"
+                      name="Community Area"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Crime Data\Flat File Source.Outputs[Flat File Source Output].Columns[FBI Code]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Crime Data\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[FBI Code]"
+                      length="5"
+                      lineageId="Package\Crime Data\Flat File Source.Outputs[Flat File Source Output].Columns[FBI Code]"
+                      name="FBI Code"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Crime Data\Flat File Source.Outputs[Flat File Source Output].Columns[X Coordinate]"
+                      dataType="r4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Crime Data\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[X Coordinate]"
+                      lineageId="Package\Crime Data\Flat File Source.Outputs[Flat File Source Output].Columns[X Coordinate]"
+                      name="X Coordinate"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Crime Data\Flat File Source.Outputs[Flat File Source Output].Columns[Y Coordinate]"
+                      dataType="r4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Crime Data\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Y Coordinate]"
+                      lineageId="Package\Crime Data\Flat File Source.Outputs[Flat File Source Output].Columns[Y Coordinate]"
+                      name="Y Coordinate"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Crime Data\Flat File Source.Outputs[Flat File Source Output].Columns[Year]"
+                      dataType="i2"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Crime Data\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Year]"
+                      lineageId="Package\Crime Data\Flat File Source.Outputs[Flat File Source Output].Columns[Year]"
+                      name="Year"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Crime Data\Flat File Source.Outputs[Flat File Source Output].Columns[Updated On]"
+                      dataType="date"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Crime Data\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Updated On]"
+                      lineageId="Package\Crime Data\Flat File Source.Outputs[Flat File Source Output].Columns[Updated On]"
+                      name="Updated On"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Crime Data\Flat File Source.Outputs[Flat File Source Output].Columns[Latitude]"
+                      dataType="r4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Crime Data\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Latitude]"
+                      lineageId="Package\Crime Data\Flat File Source.Outputs[Flat File Source Output].Columns[Latitude]"
+                      name="Latitude"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Crime Data\Flat File Source.Outputs[Flat File Source Output].Columns[Longitude]"
+                      dataType="r4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Crime Data\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Longitude]"
+                      lineageId="Package\Crime Data\Flat File Source.Outputs[Flat File Source Output].Columns[Longitude]"
+                      name="Longitude"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Crime Data\Flat File Source.Outputs[Flat File Source Output].Columns[Location]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Crime Data\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Location]"
+                      length="100"
+                      lineageId="Package\Crime Data\Flat File Source.Outputs[Flat File Source Output].Columns[Location]"
+                      name="Location"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Crime Data\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Column 0]"
+                      dataType="i4"
+                      name="Column 0" />
+                    <externalMetadataColumn
+                      refId="Package\Crime Data\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[ID]"
+                      dataType="i4"
+                      name="ID" />
+                    <externalMetadataColumn
+                      refId="Package\Crime Data\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Case Number]"
+                      codePage="1252"
+                      dataType="str"
+                      length="10"
+                      name="Case Number" />
+                    <externalMetadataColumn
+                      refId="Package\Crime Data\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Date]"
+                      dataType="date"
+                      name="Date" />
+                    <externalMetadataColumn
+                      refId="Package\Crime Data\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Block]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="Block" />
+                    <externalMetadataColumn
+                      refId="Package\Crime Data\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[IUCR]"
+                      codePage="1252"
+                      dataType="str"
+                      length="10"
+                      name="IUCR" />
+                    <externalMetadataColumn
+                      refId="Package\Crime Data\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Primary Type]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="Primary Type" />
+                    <externalMetadataColumn
+                      refId="Package\Crime Data\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Description]"
+                      codePage="1252"
+                      dataType="str"
+                      length="100"
+                      name="Description" />
+                    <externalMetadataColumn
+                      refId="Package\Crime Data\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Location Description]"
+                      codePage="1252"
+                      dataType="str"
+                      length="100"
+                      name="Location Description" />
+                    <externalMetadataColumn
+                      refId="Package\Crime Data\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Arrest]"
+                      dataType="bool"
+                      name="Arrest" />
+                    <externalMetadataColumn
+                      refId="Package\Crime Data\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Domestic]"
+                      dataType="bool"
+                      name="Domestic" />
+                    <externalMetadataColumn
+                      refId="Package\Crime Data\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Beat]"
+                      dataType="i2"
+                      name="Beat" />
+                    <externalMetadataColumn
+                      refId="Package\Crime Data\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[District]"
+                      dataType="r4"
+                      name="District" />
+                    <externalMetadataColumn
+                      refId="Package\Crime Data\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Ward]"
+                      dataType="r4"
+                      name="Ward" />
+                    <externalMetadataColumn
+                      refId="Package\Crime Data\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Community Area]"
+                      dataType="r4"
+                      name="Community Area" />
+                    <externalMetadataColumn
+                      refId="Package\Crime Data\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[FBI Code]"
+                      codePage="1252"
+                      dataType="str"
+                      length="5"
+                      name="FBI Code" />
+                    <externalMetadataColumn
+                      refId="Package\Crime Data\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[X Coordinate]"
+                      dataType="r4"
+                      name="X Coordinate" />
+                    <externalMetadataColumn
+                      refId="Package\Crime Data\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Y Coordinate]"
+                      dataType="r4"
+                      name="Y Coordinate" />
+                    <externalMetadataColumn
+                      refId="Package\Crime Data\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Year]"
+                      dataType="i2"
+                      name="Year" />
+                    <externalMetadataColumn
+                      refId="Package\Crime Data\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Updated On]"
+                      dataType="date"
+                      name="Updated On" />
+                    <externalMetadataColumn
+                      refId="Package\Crime Data\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Latitude]"
+                      dataType="r4"
+                      name="Latitude" />
+                    <externalMetadataColumn
+                      refId="Package\Crime Data\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Longitude]"
+                      dataType="r4"
+                      name="Longitude" />
+                    <externalMetadataColumn
+                      refId="Package\Crime Data\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Location]"
+                      codePage="1252"
+                      dataType="str"
+                      length="100"
+                      name="Location" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\Crime Data\Flat File Source.Outputs[Flat File Source Error Output]"
+                  isErrorOut="true"
+                  name="Flat File Source Error Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Crime Data\Flat File Source.Outputs[Flat File Source Error Output].Columns[Flat File Source Error Output Column]"
+                      codePage="1252"
+                      dataType="text"
+                      description="Flat File Source Error Output Column"
+                      lineageId="Package\Crime Data\Flat File Source.Outputs[Flat File Source Error Output].Columns[Flat File Source Error Output Column]"
+                      name="Flat File Source Error Output Column" />
+                    <outputColumn
+                      refId="Package\Crime Data\Flat File Source.Outputs[Flat File Source Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Crime Data\Flat File Source.Outputs[Flat File Source Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Crime Data\Flat File Source.Outputs[Flat File Source Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Crime Data\Flat File Source.Outputs[Flat File Source Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Crime Data\OLE DB Destination"
+              componentClassID="Microsoft.OLEDBDestination"
+              contactInfo="OLE DB Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4"
+              description="OLE DB Destination"
+              name="OLE DB Destination"
+              usesDispositions="true"
+              version="4">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset">[CrimeData]</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Forces the use of the DefaultCodePage property value when describing character data."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">0</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the values supplied for identity columns will be copied to the destination. If false, values for identity columns will be auto-generated at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepIdentity">false</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the columns containing null will have null inserted in the destination. If false, columns containing null will have their default values inserted at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepNulls">false</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies options to be used with fast load.  Applies only if fast load is turned on."
+                  name="FastLoadOptions">TABLOCK,CHECK_CONSTRAINTS</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies when commits are issued during data insertion.  A value of 0 specifies that one commit will be issued at the end of data insertion.  Applies only if fast load is turned on."
+                  name="FastLoadMaxInsertCommitSize">2147483647</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Crime Data\OLE DB Destination.Connections[OleDbConnection]"
+                  connectionManagerID="{081DF74D-F03C-4F3B-9EDE-4A76DE1B9A55}:external"
+                  connectionManagerRefId="Project.ConnectionManagers[LAPTOP-LONG-LY.Chicago_Crime]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\Crime Data\OLE DB Destination.Inputs[OLE DB Destination Input]"
+                  errorOrTruncationOperation="Insert"
+                  errorRowDisposition="FailComponent"
+                  hasSideEffects="true"
+                  name="OLE DB Destination Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Crime Data\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Column 0]"
+                      cachedDataType="i4"
+                      cachedName="Column 0"
+                      externalMetadataColumnId="Package\Crime Data\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Column 0]"
+                      lineageId="Package\Crime Data\Flat File Source.Outputs[Flat File Source Output].Columns[Column 0]" />
+                    <inputColumn
+                      refId="Package\Crime Data\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[ID]"
+                      cachedDataType="i4"
+                      cachedName="ID"
+                      externalMetadataColumnId="Package\Crime Data\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[ID]"
+                      lineageId="Package\Crime Data\Flat File Source.Outputs[Flat File Source Output].Columns[ID]" />
+                    <inputColumn
+                      refId="Package\Crime Data\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Case Number]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="10"
+                      cachedName="Case Number"
+                      externalMetadataColumnId="Package\Crime Data\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Case Number]"
+                      lineageId="Package\Crime Data\Flat File Source.Outputs[Flat File Source Output].Columns[Case Number]" />
+                    <inputColumn
+                      refId="Package\Crime Data\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Date]"
+                      cachedDataType="date"
+                      cachedName="Date"
+                      externalMetadataColumnId="Package\Crime Data\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Date]"
+                      lineageId="Package\Crime Data\Flat File Source.Outputs[Flat File Source Output].Columns[Date]" />
+                    <inputColumn
+                      refId="Package\Crime Data\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Block]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="Block"
+                      externalMetadataColumnId="Package\Crime Data\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Block]"
+                      lineageId="Package\Crime Data\Flat File Source.Outputs[Flat File Source Output].Columns[Block]" />
+                    <inputColumn
+                      refId="Package\Crime Data\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[IUCR]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="10"
+                      cachedName="IUCR"
+                      externalMetadataColumnId="Package\Crime Data\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[IUCR]"
+                      lineageId="Package\Crime Data\Flat File Source.Outputs[Flat File Source Output].Columns[IUCR]" />
+                    <inputColumn
+                      refId="Package\Crime Data\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Primary Type]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="Primary Type"
+                      externalMetadataColumnId="Package\Crime Data\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Primary Type]"
+                      lineageId="Package\Crime Data\Flat File Source.Outputs[Flat File Source Output].Columns[Primary Type]" />
+                    <inputColumn
+                      refId="Package\Crime Data\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Description]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="100"
+                      cachedName="Description"
+                      externalMetadataColumnId="Package\Crime Data\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Description]"
+                      lineageId="Package\Crime Data\Flat File Source.Outputs[Flat File Source Output].Columns[Description]" />
+                    <inputColumn
+                      refId="Package\Crime Data\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Location Description]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="100"
+                      cachedName="Location Description"
+                      externalMetadataColumnId="Package\Crime Data\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Location Description]"
+                      lineageId="Package\Crime Data\Flat File Source.Outputs[Flat File Source Output].Columns[Location Description]" />
+                    <inputColumn
+                      refId="Package\Crime Data\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Arrest]"
+                      cachedDataType="bool"
+                      cachedName="Arrest"
+                      externalMetadataColumnId="Package\Crime Data\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Arrest]"
+                      lineageId="Package\Crime Data\Flat File Source.Outputs[Flat File Source Output].Columns[Arrest]" />
+                    <inputColumn
+                      refId="Package\Crime Data\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Domestic]"
+                      cachedDataType="bool"
+                      cachedName="Domestic"
+                      externalMetadataColumnId="Package\Crime Data\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Domestic]"
+                      lineageId="Package\Crime Data\Flat File Source.Outputs[Flat File Source Output].Columns[Domestic]" />
+                    <inputColumn
+                      refId="Package\Crime Data\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Beat]"
+                      cachedDataType="i2"
+                      cachedName="Beat"
+                      externalMetadataColumnId="Package\Crime Data\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Beat]"
+                      lineageId="Package\Crime Data\Flat File Source.Outputs[Flat File Source Output].Columns[Beat]" />
+                    <inputColumn
+                      refId="Package\Crime Data\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[District]"
+                      cachedDataType="r4"
+                      cachedName="District"
+                      externalMetadataColumnId="Package\Crime Data\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[District]"
+                      lineageId="Package\Crime Data\Flat File Source.Outputs[Flat File Source Output].Columns[District]" />
+                    <inputColumn
+                      refId="Package\Crime Data\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Ward]"
+                      cachedDataType="r4"
+                      cachedName="Ward"
+                      externalMetadataColumnId="Package\Crime Data\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Ward]"
+                      lineageId="Package\Crime Data\Flat File Source.Outputs[Flat File Source Output].Columns[Ward]" />
+                    <inputColumn
+                      refId="Package\Crime Data\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Community Area]"
+                      cachedDataType="r4"
+                      cachedName="Community Area"
+                      externalMetadataColumnId="Package\Crime Data\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Community Area]"
+                      lineageId="Package\Crime Data\Flat File Source.Outputs[Flat File Source Output].Columns[Community Area]" />
+                    <inputColumn
+                      refId="Package\Crime Data\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[FBI Code]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="5"
+                      cachedName="FBI Code"
+                      externalMetadataColumnId="Package\Crime Data\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[FBI Code]"
+                      lineageId="Package\Crime Data\Flat File Source.Outputs[Flat File Source Output].Columns[FBI Code]" />
+                    <inputColumn
+                      refId="Package\Crime Data\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[X Coordinate]"
+                      cachedDataType="r4"
+                      cachedName="X Coordinate"
+                      externalMetadataColumnId="Package\Crime Data\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[X Coordinate]"
+                      lineageId="Package\Crime Data\Flat File Source.Outputs[Flat File Source Output].Columns[X Coordinate]" />
+                    <inputColumn
+                      refId="Package\Crime Data\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Y Coordinate]"
+                      cachedDataType="r4"
+                      cachedName="Y Coordinate"
+                      externalMetadataColumnId="Package\Crime Data\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Y Coordinate]"
+                      lineageId="Package\Crime Data\Flat File Source.Outputs[Flat File Source Output].Columns[Y Coordinate]" />
+                    <inputColumn
+                      refId="Package\Crime Data\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Year]"
+                      cachedDataType="i2"
+                      cachedName="Year"
+                      externalMetadataColumnId="Package\Crime Data\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Year]"
+                      lineageId="Package\Crime Data\Flat File Source.Outputs[Flat File Source Output].Columns[Year]" />
+                    <inputColumn
+                      refId="Package\Crime Data\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Updated On]"
+                      cachedDataType="date"
+                      cachedName="Updated On"
+                      externalMetadataColumnId="Package\Crime Data\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Updated On]"
+                      lineageId="Package\Crime Data\Flat File Source.Outputs[Flat File Source Output].Columns[Updated On]" />
+                    <inputColumn
+                      refId="Package\Crime Data\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Latitude]"
+                      cachedDataType="r4"
+                      cachedName="Latitude"
+                      externalMetadataColumnId="Package\Crime Data\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Latitude]"
+                      lineageId="Package\Crime Data\Flat File Source.Outputs[Flat File Source Output].Columns[Latitude]" />
+                    <inputColumn
+                      refId="Package\Crime Data\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Longitude]"
+                      cachedDataType="r4"
+                      cachedName="Longitude"
+                      externalMetadataColumnId="Package\Crime Data\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Longitude]"
+                      lineageId="Package\Crime Data\Flat File Source.Outputs[Flat File Source Output].Columns[Longitude]" />
+                    <inputColumn
+                      refId="Package\Crime Data\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Location]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="100"
+                      cachedName="Location"
+                      externalMetadataColumnId="Package\Crime Data\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Location]"
+                      lineageId="Package\Crime Data\Flat File Source.Outputs[Flat File Source Output].Columns[Location]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Crime Data\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Column 0]"
+                      dataType="i4"
+                      name="Column 0" />
+                    <externalMetadataColumn
+                      refId="Package\Crime Data\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[ID]"
+                      dataType="i4"
+                      name="ID" />
+                    <externalMetadataColumn
+                      refId="Package\Crime Data\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Case Number]"
+                      codePage="1252"
+                      dataType="str"
+                      length="10"
+                      name="Case Number" />
+                    <externalMetadataColumn
+                      refId="Package\Crime Data\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Date]"
+                      dataType="dbTimeStamp"
+                      name="Date" />
+                    <externalMetadataColumn
+                      refId="Package\Crime Data\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Block]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="Block" />
+                    <externalMetadataColumn
+                      refId="Package\Crime Data\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[IUCR]"
+                      codePage="1252"
+                      dataType="str"
+                      length="10"
+                      name="IUCR" />
+                    <externalMetadataColumn
+                      refId="Package\Crime Data\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Primary Type]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="Primary Type" />
+                    <externalMetadataColumn
+                      refId="Package\Crime Data\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Description]"
+                      codePage="1252"
+                      dataType="str"
+                      length="100"
+                      name="Description" />
+                    <externalMetadataColumn
+                      refId="Package\Crime Data\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Location Description]"
+                      codePage="1252"
+                      dataType="str"
+                      length="100"
+                      name="Location Description" />
+                    <externalMetadataColumn
+                      refId="Package\Crime Data\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Arrest]"
+                      dataType="bool"
+                      name="Arrest" />
+                    <externalMetadataColumn
+                      refId="Package\Crime Data\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Domestic]"
+                      dataType="bool"
+                      name="Domestic" />
+                    <externalMetadataColumn
+                      refId="Package\Crime Data\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Beat]"
+                      dataType="i2"
+                      name="Beat" />
+                    <externalMetadataColumn
+                      refId="Package\Crime Data\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[District]"
+                      dataType="r4"
+                      name="District" />
+                    <externalMetadataColumn
+                      refId="Package\Crime Data\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Ward]"
+                      dataType="r4"
+                      name="Ward" />
+                    <externalMetadataColumn
+                      refId="Package\Crime Data\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Community Area]"
+                      dataType="r4"
+                      name="Community Area" />
+                    <externalMetadataColumn
+                      refId="Package\Crime Data\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[FBI Code]"
+                      codePage="1252"
+                      dataType="str"
+                      length="5"
+                      name="FBI Code" />
+                    <externalMetadataColumn
+                      refId="Package\Crime Data\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[X Coordinate]"
+                      dataType="r4"
+                      name="X Coordinate" />
+                    <externalMetadataColumn
+                      refId="Package\Crime Data\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Y Coordinate]"
+                      dataType="r4"
+                      name="Y Coordinate" />
+                    <externalMetadataColumn
+                      refId="Package\Crime Data\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Year]"
+                      dataType="i2"
+                      name="Year" />
+                    <externalMetadataColumn
+                      refId="Package\Crime Data\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Updated On]"
+                      dataType="dbTimeStamp"
+                      name="Updated On" />
+                    <externalMetadataColumn
+                      refId="Package\Crime Data\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Latitude]"
+                      dataType="r4"
+                      name="Latitude" />
+                    <externalMetadataColumn
+                      refId="Package\Crime Data\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Longitude]"
+                      dataType="r4"
+                      name="Longitude" />
+                    <externalMetadataColumn
+                      refId="Package\Crime Data\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Location]"
+                      codePage="1252"
+                      dataType="str"
+                      length="100"
+                      name="Location" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Crime Data\OLE DB Destination.Outputs[OLE DB Destination Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="OLE DB Destination Error Output"
+                  synchronousInputId="Package\Crime Data\OLE DB Destination.Inputs[OLE DB Destination Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Crime Data\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Crime Data\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Crime Data\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Crime Data\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+          </components>
+          <paths>
+            <path
+              refId="Package\Crime Data.Paths[Flat File Source Output]"
+              endId="Package\Crime Data\OLE DB Destination.Inputs[OLE DB Destination Input]"
+              name="Flat File Source Output"
+              startId="Package\Crime Data\Flat File Source.Outputs[Flat File Source Output]" />
+          </paths>
+        </pipeline>
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\FBI code"
+      DTS:CreationName="Microsoft.Pipeline"
+      DTS:Description="Data Flow Task"
+      DTS:DTSID="{FB5F5057-1D03-4CA2-B7D5-12FDFEF7A963}"
+      DTS:ExecutableType="Microsoft.Pipeline"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="FBI code"
+      DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <pipeline
+          version="1">
+          <components>
+            <component
+              refId="Package\FBI code\Flat File Source"
+              componentClassID="Microsoft.FlatFileSource"
+              contactInfo="Flat File Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
+              description="Flat File Source"
+              localeId="1033"
+              name="Flat File Source"
+              usesDispositions="true"
+              version="1">
+              <properties>
+                <property
+                  dataType="System.Boolean"
+                  description="Specifies whether zero-length columns are treated as null."
+                  name="RetainNulls">false</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of an output column containing the file name. If no name is specified, no output column containing the file name will be generated."
+                  name="FileNameColumnName"></property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\FBI code\Flat File Source.Connections[FlatFileConnection]"
+                  connectionManagerID="Package.ConnectionManagers[FBI Code]"
+                  connectionManagerRefId="Package.ConnectionManagers[FBI Code]"
+                  name="FlatFileConnection" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\FBI code\Flat File Source.Outputs[Flat File Source Output]"
+                  name="Flat File Source Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\FBI code\Flat File Source.Outputs[Flat File Source Output].Columns[Code]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\FBI code\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Code]"
+                      length="3"
+                      lineageId="Package\FBI code\Flat File Source.Outputs[Flat File Source Output].Columns[Code]"
+                      name="Code"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\FBI code\Flat File Source.Outputs[Flat File Source Output].Columns[Categories]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\FBI code\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Categories]"
+                      length="25"
+                      lineageId="Package\FBI code\Flat File Source.Outputs[Flat File Source Output].Columns[Categories]"
+                      name="Categories"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\FBI code\Flat File Source.Outputs[Flat File Source Output].Columns[Definition]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\FBI code\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Definition]"
+                      length="360"
+                      lineageId="Package\FBI code\Flat File Source.Outputs[Flat File Source Output].Columns[Definition]"
+                      name="Definition"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\FBI code\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Code]"
+                      codePage="1252"
+                      dataType="str"
+                      length="3"
+                      name="Code" />
+                    <externalMetadataColumn
+                      refId="Package\FBI code\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Categories]"
+                      codePage="1252"
+                      dataType="str"
+                      length="25"
+                      name="Categories" />
+                    <externalMetadataColumn
+                      refId="Package\FBI code\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Definition]"
+                      codePage="1252"
+                      dataType="str"
+                      length="360"
+                      name="Definition" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\FBI code\Flat File Source.Outputs[Flat File Source Error Output]"
+                  isErrorOut="true"
+                  name="Flat File Source Error Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\FBI code\Flat File Source.Outputs[Flat File Source Error Output].Columns[Flat File Source Error Output Column]"
+                      codePage="1252"
+                      dataType="text"
+                      description="Flat File Source Error Output Column"
+                      lineageId="Package\FBI code\Flat File Source.Outputs[Flat File Source Error Output].Columns[Flat File Source Error Output Column]"
+                      name="Flat File Source Error Output Column" />
+                    <outputColumn
+                      refId="Package\FBI code\Flat File Source.Outputs[Flat File Source Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\FBI code\Flat File Source.Outputs[Flat File Source Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\FBI code\Flat File Source.Outputs[Flat File Source Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\FBI code\Flat File Source.Outputs[Flat File Source Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\FBI code\OLE DB Destination"
+              componentClassID="Microsoft.OLEDBDestination"
+              contactInfo="OLE DB Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4"
+              description="OLE DB Destination"
+              name="OLE DB Destination"
+              usesDispositions="true"
+              version="4">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset">[FBICode]</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Forces the use of the DefaultCodePage property value when describing character data."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">0</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the values supplied for identity columns will be copied to the destination. If false, values for identity columns will be auto-generated at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepIdentity">false</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the columns containing null will have null inserted in the destination. If false, columns containing null will have their default values inserted at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepNulls">false</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies options to be used with fast load.  Applies only if fast load is turned on."
+                  name="FastLoadOptions">TABLOCK,CHECK_CONSTRAINTS</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies when commits are issued during data insertion.  A value of 0 specifies that one commit will be issued at the end of data insertion.  Applies only if fast load is turned on."
+                  name="FastLoadMaxInsertCommitSize">2147483647</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\FBI code\OLE DB Destination.Connections[OleDbConnection]"
+                  connectionManagerID="{081DF74D-F03C-4F3B-9EDE-4A76DE1B9A55}:external"
+                  connectionManagerRefId="Project.ConnectionManagers[LAPTOP-LONG-LY.Chicago_Crime]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\FBI code\OLE DB Destination.Inputs[OLE DB Destination Input]"
+                  errorOrTruncationOperation="Insert"
+                  errorRowDisposition="FailComponent"
+                  hasSideEffects="true"
+                  name="OLE DB Destination Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\FBI code\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Code]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="3"
+                      cachedName="Code"
+                      externalMetadataColumnId="Package\FBI code\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Code]"
+                      lineageId="Package\FBI code\Flat File Source.Outputs[Flat File Source Output].Columns[Code]" />
+                    <inputColumn
+                      refId="Package\FBI code\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Categories]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="25"
+                      cachedName="Categories"
+                      externalMetadataColumnId="Package\FBI code\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Categories]"
+                      lineageId="Package\FBI code\Flat File Source.Outputs[Flat File Source Output].Columns[Categories]" />
+                    <inputColumn
+                      refId="Package\FBI code\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Definition]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="360"
+                      cachedName="Definition"
+                      externalMetadataColumnId="Package\FBI code\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Definition]"
+                      lineageId="Package\FBI code\Flat File Source.Outputs[Flat File Source Output].Columns[Definition]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\FBI code\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Code]"
+                      codePage="1252"
+                      dataType="str"
+                      length="3"
+                      name="Code" />
+                    <externalMetadataColumn
+                      refId="Package\FBI code\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Categories]"
+                      codePage="1252"
+                      dataType="str"
+                      length="25"
+                      name="Categories" />
+                    <externalMetadataColumn
+                      refId="Package\FBI code\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Definition]"
+                      codePage="1252"
+                      dataType="str"
+                      length="360"
+                      name="Definition" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\FBI code\OLE DB Destination.Outputs[OLE DB Destination Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="OLE DB Destination Error Output"
+                  synchronousInputId="Package\FBI code\OLE DB Destination.Inputs[OLE DB Destination Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\FBI code\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\FBI code\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\FBI code\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\FBI code\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+          </components>
+          <paths>
+            <path
+              refId="Package\FBI code.Paths[Flat File Source Output]"
+              endId="Package\FBI code\OLE DB Destination.Inputs[OLE DB Destination Input]"
+              name="Flat File Source Output"
+              startId="Package\FBI code\Flat File Source.Outputs[Flat File Source Output]" />
+          </paths>
+        </pipeline>
+      </DTS:ObjectData>
+    </DTS:Executable>
+  </DTS:Executables>
+  <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
+<!--This CDATA section contains the layout information of the package. The section includes information such as (x,y) coordinates, width, and height.-->
+<!--If you manually edit this section and make a mistake, you can delete it. -->
+<!--The package will still be able to load normally but the previous layout information will be lost and the designer will automatically re-arrange the elements on the design surface.-->
+<Objects
+  Version="8">
+  <!--Each node below will contain properties that do not affect runtime behavior.-->
+  <Package
+    design-time-name="Package">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph">
+        <NodeLayout
+          Size="112,41.6"
+          Id="Package\Census"
+          TopLeft="370.000006301063,41.2941182261932" />
+        <NodeLayout
+          Size="131.2,41.6"
+          Id="Package\Crime Data"
+          TopLeft="379.761879818511,164.156864072936" />
+        <NodeLayout
+          Size="120,41.6"
+          Id="Package\FBI code"
+          TopLeft="377.738070496762,105.223530350248" />
+      </GraphLayout>
+    </LayoutInfo>
+  </Package>
+  <TaskHost
+    design-time-name="Package\Census">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="170.4,41.6"
+          Id="Package\Census\OLE DB Destination"
+          TopLeft="486.428579712401,91.0000012762407" />
+        <NodeLayout
+          Size="150.4,41.6"
+          Id="Package\Census\Flat File Source"
+          TopLeft="195.71428904728,94.8235307416289" />
+        <EdgeLayout
+          Id="Package\Census.Paths[Flat File Source Output]"
+          TopLeft="346.11428904728,113.711766008935">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="140.31429066512,0"
+              Start="0,0"
+              End="132.81429066512,0">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="132.81429066512,0" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\Census\OLE DB Destination">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <TaskHost
+    design-time-name="Package\Crime Data">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="171.2,41.6"
+          Id="Package\Crime Data\OLE DB Destination"
+          TopLeft="411.666650308504,129.133334359593" />
+        <NodeLayout
+          Size="151.2,41.6"
+          Id="Package\Crime Data\Flat File Source"
+          TopLeft="270.833322571384,12.1333334297604" />
+        <EdgeLayout
+          Id="Package\Crime Data.Paths[Flat File Source Output]"
+          TopLeft="346.433322571384,53.7333334297604">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="150.83332773712,75.4000009298325"
+              Start="0,0"
+              End="150.83332773712,67.9000009298325">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,33.7000004649162" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,33.7000004649162"
+                    Point2="0,37.7000004649162"
+                    Point3="4,37.7000004649162" />
+                  <mssgle:LineSegment
+                    End="146.83332773712,37.7000004649162" />
+                  <mssgle:CubicBezierSegment
+                    Point1="146.83332773712,37.7000004649162"
+                    Point2="150.83332773712,37.7000004649162"
+                    Point3="150.83332773712,41.7000004649162" />
+                  <mssgle:LineSegment
+                    End="150.83332773712,67.9000009298325" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\Crime Data\OLE DB Destination">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <TaskHost
+    design-time-name="Package\FBI code">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="170.4,41.6"
+          Id="Package\FBI code\OLE DB Destination"
+          TopLeft="307,153" />
+        <NodeLayout
+          Size="150.4,41.6"
+          Id="Package\FBI code\Flat File Source"
+          TopLeft="174,49" />
+        <EdgeLayout
+          Id="Package\FBI code.Paths[Flat File Source Output]"
+          TopLeft="249.2,90.6">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="143,62.4"
+              Start="0,0"
+              End="143,54.9">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,27.2" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,27.2"
+                    Point2="0,31.2"
+                    Point3="4,31.2" />
+                  <mssgle:LineSegment
+                    End="139,31.2" />
+                  <mssgle:CubicBezierSegment
+                    Point1="139,31.2"
+                    Point2="143,31.2"
+                    Point3="143,35.2" />
+                  <mssgle:LineSegment
+                    End="143,54.9" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\FBI code\OLE DB Destination">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+</Objects>]]></DTS:DesignTimeProperties>
+</DTS:Executable>

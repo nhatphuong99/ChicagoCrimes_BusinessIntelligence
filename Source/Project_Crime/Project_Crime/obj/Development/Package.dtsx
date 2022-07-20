@@ -1,0 +1,891 @@
+<?xml version="1.0"?>
+<DTS:Executable xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:refId="Package"
+  DTS:CreationDate="11/8/2020 9:07:01 AM"
+  DTS:CreationName="Microsoft.Package"
+  DTS:CreatorComputerName="LAPTOP-LONG-LY"
+  DTS:CreatorName="LAPTOP-LONG-LY\Ly T-Long"
+  DTS:DTSID="{7A59EB7B-0581-4B94-8B03-631C39A40A93}"
+  DTS:ExecutableType="Microsoft.Package"
+  DTS:LastModifiedProductVersion="15.0.2000.132"
+  DTS:LocaleID="1033"
+  DTS:ObjectName="Package"
+  DTS:PackageType="5"
+  DTS:VersionBuild="14"
+  DTS:VersionGUID="{CADED19C-7634-426B-A370-9203970E4FA0}">
+  <DTS:Property
+    DTS:Name="PackageFormatVersion">8</DTS:Property>
+  <DTS:ConnectionManagers>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[Flat File Connection Manager]"
+      DTS:CreationName="FLATFILE"
+      DTS:DTSID="{0D70D9BD-642B-43FD-913A-12F5F951BFE8}"
+      DTS:ObjectName="Flat File Connection Manager">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:Format="Delimited"
+          DTS:LocaleID="1033"
+          DTS:HeaderRowDelimiter="_x000D__x000A_"
+          DTS:ColumnNamesInFirstDataRow="True"
+          DTS:RowDelimiter=""
+          DTS:TextQualifier="_x003C_none_x003E_"
+          DTS:CodePage="1252"
+          DTS:ConnectionString="D:\LONG\LEARNING\Y4\Term1\BI\Project\Data set\Chicago_Crimes_2012_to_2017.csv">
+          <DTS:FlatFileColumns>
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Column 0"
+              DTS:DTSID="{3F6D75FA-5D28-410A-8FC8-E70018A74C89}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="ID"
+              DTS:DTSID="{1510D95E-32E0-40EA-A552-80C4A397D683}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Case Number"
+              DTS:DTSID="{93A607C3-90A7-44A0-901F-0CC0BCB39E3A}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x000A_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Date"
+              DTS:DTSID="{961DC1E3-D270-4FE9-BEF5-B747E5AEB15C}"
+              DTS:CreationName="" />
+          </DTS:FlatFileColumns>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[Flat File Connection Manager 1]"
+      DTS:CreationName="FLATFILE"
+      DTS:DTSID="{4E0AF1A8-D8B0-4F32-8B73-E016747B920C}"
+      DTS:ObjectName="Flat File Connection Manager 1">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:Format="Delimited"
+          DTS:LocaleID="1033"
+          DTS:HeaderRowDelimiter="_x000D__x000A_"
+          DTS:ColumnNamesInFirstDataRow="True"
+          DTS:RowDelimiter=""
+          DTS:TextQualifier="_x003C_none_x003E_"
+          DTS:CodePage="1252"
+          DTS:ConnectionString="D:\LONG\LEARNING\Y4\Term1\BI\Project\Data set\Chicago_Crimes_2012_to_2017.csv">
+          <DTS:FlatFileColumns>
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Column 0"
+              DTS:DTSID="{3AE6C84F-0E3D-437A-8BCB-B2F877729EF6}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="ID"
+              DTS:DTSID="{B63C289C-7F7A-4F71-A805-06B8F2DB7426}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Case Number"
+              DTS:DTSID="{D43C6747-22F6-44CF-96E5-8F9D9B58D765}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Date"
+              DTS:DTSID="{9EEE9DE6-AA5E-4F42-8DC4-5C8A3AAB57ED}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Block"
+              DTS:DTSID="{BDB79BEC-90E6-494B-98EF-7196F92F0307}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="IUCR"
+              DTS:DTSID="{EACCBAAB-8063-4122-A4CA-4AEDB394E6FD}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Primary Type"
+              DTS:DTSID="{516F987D-4CA4-4800-9EA7-FE9FE9D2666A}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Description"
+              DTS:DTSID="{1049E78F-B3B2-4766-BBEE-1AD9EF86379D}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Location Description"
+              DTS:DTSID="{7E1C72D9-F936-4705-8765-10D45ADBEDBD}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Arrest"
+              DTS:DTSID="{14AF391A-944E-47A3-84D7-71AB8AE122C5}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Domestic"
+              DTS:DTSID="{A52E1F77-BB56-4005-A2EE-5DEFA149E52E}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Beat"
+              DTS:DTSID="{DDAD47D6-AE07-422C-86E5-77A56DE640CE}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="District"
+              DTS:DTSID="{0C1FFCD2-87E0-4F0C-AB94-31CB2CEED8FA}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Ward"
+              DTS:DTSID="{821E896C-547E-467B-B690-C2CF43BD454D}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Community Area"
+              DTS:DTSID="{9DD5CB7B-7C1F-4241-80D8-BED383941290}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="FBI Code"
+              DTS:DTSID="{CA2B7F55-5D9B-4668-BF3A-FDEAD4FCC2B0}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="X Coordinate"
+              DTS:DTSID="{32DF4FB3-EB2A-4AC2-AE3A-A6A2F1C134DB}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Y Coordinate"
+              DTS:DTSID="{29DC1F81-D635-4CBE-9783-7CC301452F93}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Year"
+              DTS:DTSID="{7BBA51A7-C643-47CD-8885-74299AF5C63B}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Updated On"
+              DTS:DTSID="{9D23A276-8445-4653-8118-5724DFDD313B}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Latitude"
+              DTS:DTSID="{5B1BD961-4DC6-4D00-A9C4-5A0AA169F937}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Longitude"
+              DTS:DTSID="{41801A2C-C0C7-442D-BCA3-36781FDFB1B5}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x000A_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Location"
+              DTS:DTSID="{F587E45F-63FD-4AA5-8974-B85236A007BA}"
+              DTS:CreationName="" />
+          </DTS:FlatFileColumns>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+  </DTS:ConnectionManagers>
+  <DTS:Variables />
+  <DTS:Executables>
+    <DTS:Executable
+      DTS:refId="Package\Task 7b"
+      DTS:CreationName="Microsoft.Pipeline"
+      DTS:Description="Data Flow Task"
+      DTS:DTSID="{FD12264D-E00F-4795-BF7E-7F8B421128FE}"
+      DTS:ExecutableType="Microsoft.Pipeline"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Task 7b"
+      DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <pipeline
+          version="1">
+          <components>
+            <component
+              refId="Package\Task 7b\Convert Month Short Name"
+              componentClassID="Microsoft.DerivedColumn"
+              contactInfo="Derived Column;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
+              description="Creates new column values by applying expressions to transformation input columns. Create new columns or overwrite existing ones. For example, concatenate the values from the 'first name' and 'last name' column to make a 'full name' column."
+              name="Convert Month Short Name"
+              usesDispositions="true">
+              <inputs>
+                <input
+                  refId="Package\Task 7b\Convert Month Short Name.Inputs[Derived Column Input]"
+                  description="Input to the Derived Column Transformation"
+                  name="Derived Column Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Task 7b\Convert Month Short Name.Inputs[Derived Column Input].Columns[Month]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="Month"
+                      lineageId="Package\Task 7b\Split Month.Outputs[Derived Column Output].Columns[Month]" />
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Task 7b\Convert Month Short Name.Outputs[Derived Column Output]"
+                  description="Default Output of the Derived Column Transformation"
+                  exclusionGroup="1"
+                  name="Derived Column Output"
+                  synchronousInputId="Package\Task 7b\Convert Month Short Name.Inputs[Derived Column Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Task 7b\Convert Month Short Name.Outputs[Derived Column Output].Columns[MonthShortName]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Computation"
+                      errorRowDisposition="FailComponent"
+                      length="3"
+                      lineageId="Package\Task 7b\Convert Month Short Name.Outputs[Derived Column Output].Columns[MonthShortName]"
+                      name="MonthShortName"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Expression"
+                          name="Expression">#{Package\Task 7b\Split Month.Outputs[Derived Column Output].Columns[Month]} == "01" ? "Jan" : #{Package\Task 7b\Split Month.Outputs[Derived Column Output].Columns[Month]} == "02" ? "Feb" : #{Package\Task 7b\Split Month.Outputs[Derived Column Output].Columns[Month]} == "03" ? "Mar" : #{Package\Task 7b\Split Month.Outputs[Derived Column Output].Columns[Month]} == "04" ? "Apr" : #{Package\Task 7b\Split Month.Outputs[Derived Column Output].Columns[Month]} == "05" ? "May" : #{Package\Task 7b\Split Month.Outputs[Derived Column Output].Columns[Month]} == "06" ? "Jun" : #{Package\Task 7b\Split Month.Outputs[Derived Column Output].Columns[Month]} == "07" ? "Jul" : #{Package\Task 7b\Split Month.Outputs[Derived Column Output].Columns[Month]} == "08" ? "Aug" : #{Package\Task 7b\Split Month.Outputs[Derived Column Output].Columns[Month]} == "09" ? "Sep" : #{Package\Task 7b\Split Month.Outputs[Derived Column Output].Columns[Month]} == "10" ? "Oct" : #{Package\Task 7b\Split Month.Outputs[Derived Column Output].Columns[Month]} == "11" ? "Nov" : "Dec"</property>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Friendly Expression"
+                          expressionType="Notify"
+                          name="FriendlyExpression">Month == "01" ? "Jan" : Month == "02" ? "Feb" : Month == "03" ? "Mar" : Month == "04" ? "Apr" : Month == "05" ? "May" : Month == "06" ? "Jun" : Month == "07" ? "Jul" : Month == "08" ? "Aug" : Month == "09" ? "Sep" : Month == "10" ? "Oct" : Month == "11" ? "Nov" : "Dec"</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Task 7b\Convert Month Short Name.Outputs[Derived Column Error Output]"
+                  description="Error Output of the Derived Column Transformation"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Derived Column Error Output"
+                  synchronousInputId="Package\Task 7b\Convert Month Short Name.Inputs[Derived Column Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Task 7b\Convert Month Short Name.Outputs[Derived Column Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Task 7b\Convert Month Short Name.Outputs[Derived Column Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Task 7b\Convert Month Short Name.Outputs[Derived Column Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Task 7b\Convert Month Short Name.Outputs[Derived Column Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Task 7b\Flat File Source"
+              componentClassID="Microsoft.FlatFileSource"
+              contactInfo="Flat File Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
+              description="Flat File Source"
+              localeId="1033"
+              name="Flat File Source"
+              usesDispositions="true"
+              version="1">
+              <properties>
+                <property
+                  dataType="System.Boolean"
+                  description="Specifies whether zero-length columns are treated as null."
+                  name="RetainNulls">false</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of an output column containing the file name. If no name is specified, no output column containing the file name will be generated."
+                  name="FileNameColumnName"></property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Task 7b\Flat File Source.Connections[FlatFileConnection]"
+                  connectionManagerID="Package.ConnectionManagers[Flat File Connection Manager 1]"
+                  connectionManagerRefId="Package.ConnectionManagers[Flat File Connection Manager 1]"
+                  name="FlatFileConnection" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\Task 7b\Flat File Source.Outputs[Flat File Source Output]"
+                  name="Flat File Source Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Task 7b\Flat File Source.Outputs[Flat File Source Output].Columns[Date]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Task 7b\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Date]"
+                      length="50"
+                      lineageId="Package\Task 7b\Flat File Source.Outputs[Flat File Source Output].Columns[Date]"
+                      name="Date"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Task 7b\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Column 0]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="Column 0" />
+                    <externalMetadataColumn
+                      refId="Package\Task 7b\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[ID]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="ID" />
+                    <externalMetadataColumn
+                      refId="Package\Task 7b\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Case Number]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="Case Number" />
+                    <externalMetadataColumn
+                      refId="Package\Task 7b\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Date]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="Date" />
+                    <externalMetadataColumn
+                      refId="Package\Task 7b\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Block]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="Block" />
+                    <externalMetadataColumn
+                      refId="Package\Task 7b\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[IUCR]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="IUCR" />
+                    <externalMetadataColumn
+                      refId="Package\Task 7b\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Primary Type]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="Primary Type" />
+                    <externalMetadataColumn
+                      refId="Package\Task 7b\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Description]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="Description" />
+                    <externalMetadataColumn
+                      refId="Package\Task 7b\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Location Description]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="Location Description" />
+                    <externalMetadataColumn
+                      refId="Package\Task 7b\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Arrest]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="Arrest" />
+                    <externalMetadataColumn
+                      refId="Package\Task 7b\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Domestic]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="Domestic" />
+                    <externalMetadataColumn
+                      refId="Package\Task 7b\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Beat]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="Beat" />
+                    <externalMetadataColumn
+                      refId="Package\Task 7b\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[District]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="District" />
+                    <externalMetadataColumn
+                      refId="Package\Task 7b\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Ward]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="Ward" />
+                    <externalMetadataColumn
+                      refId="Package\Task 7b\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Community Area]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="Community Area" />
+                    <externalMetadataColumn
+                      refId="Package\Task 7b\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[FBI Code]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="FBI Code" />
+                    <externalMetadataColumn
+                      refId="Package\Task 7b\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[X Coordinate]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="X Coordinate" />
+                    <externalMetadataColumn
+                      refId="Package\Task 7b\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Y Coordinate]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="Y Coordinate" />
+                    <externalMetadataColumn
+                      refId="Package\Task 7b\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Year]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="Year" />
+                    <externalMetadataColumn
+                      refId="Package\Task 7b\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Updated On]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="Updated On" />
+                    <externalMetadataColumn
+                      refId="Package\Task 7b\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Latitude]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="Latitude" />
+                    <externalMetadataColumn
+                      refId="Package\Task 7b\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Longitude]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="Longitude" />
+                    <externalMetadataColumn
+                      refId="Package\Task 7b\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Location]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="Location" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\Task 7b\Flat File Source.Outputs[Flat File Source Error Output]"
+                  isErrorOut="true"
+                  name="Flat File Source Error Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Task 7b\Flat File Source.Outputs[Flat File Source Error Output].Columns[Flat File Source Error Output Column]"
+                      codePage="1252"
+                      dataType="text"
+                      description="Flat File Source Error Output Column"
+                      lineageId="Package\Task 7b\Flat File Source.Outputs[Flat File Source Error Output].Columns[Flat File Source Error Output Column]"
+                      name="Flat File Source Error Output Column" />
+                    <outputColumn
+                      refId="Package\Task 7b\Flat File Source.Outputs[Flat File Source Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Task 7b\Flat File Source.Outputs[Flat File Source Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Task 7b\Flat File Source.Outputs[Flat File Source Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Task 7b\Flat File Source.Outputs[Flat File Source Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Task 7b\Multicast"
+              componentClassID="Microsoft.Multicast"
+              contactInfo="Multicast;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
+              description="Distributes every input row to every row in one or more outputs. For example, branch your data flow to make a copy of data so that some values can be masked before sharing with external partners."
+              name="Multicast">
+              <inputs>
+                <input
+                  refId="Package\Task 7b\Multicast.Inputs[Multicast Input 1]"
+                  name="Multicast Input 1">
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Task 7b\Multicast.Outputs[Multicast Output 1]"
+                  dangling="true"
+                  deleteOutputOnPathDetached="true"
+                  name="Multicast Output 1"
+                  synchronousInputId="Package\Task 7b\Multicast.Inputs[Multicast Input 1]">
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Task 7b\Split Month"
+              componentClassID="Microsoft.DerivedColumn"
+              contactInfo="Derived Column;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
+              description="Creates new column values by applying expressions to transformation input columns. Create new columns or overwrite existing ones. For example, concatenate the values from the 'first name' and 'last name' column to make a 'full name' column."
+              name="Split Month"
+              usesDispositions="true">
+              <inputs>
+                <input
+                  refId="Package\Task 7b\Split Month.Inputs[Derived Column Input]"
+                  description="Input to the Derived Column Transformation"
+                  name="Derived Column Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Task 7b\Split Month.Inputs[Derived Column Input].Columns[Date]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="Date"
+                      lineageId="Package\Task 7b\Flat File Source.Outputs[Flat File Source Output].Columns[Date]" />
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Task 7b\Split Month.Outputs[Derived Column Output]"
+                  description="Default Output of the Derived Column Transformation"
+                  exclusionGroup="1"
+                  name="Derived Column Output"
+                  synchronousInputId="Package\Task 7b\Split Month.Inputs[Derived Column Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Task 7b\Split Month.Outputs[Derived Column Output].Columns[Month]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Computation"
+                      errorRowDisposition="FailComponent"
+                      length="50"
+                      lineageId="Package\Task 7b\Split Month.Outputs[Derived Column Output].Columns[Month]"
+                      name="Month"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Expression"
+                          name="Expression">[SUBSTRING](#{Package\Task 7b\Flat File Source.Outputs[Flat File Source Output].Columns[Date]},1,[FINDSTRING](#{Package\Task 7b\Flat File Source.Outputs[Flat File Source Output].Columns[Date]},"/",1) - 1)</property>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Friendly Expression"
+                          expressionType="Notify"
+                          name="FriendlyExpression">SUBSTRING(Date,1,FINDSTRING(Date,"/",1) - 1)</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Task 7b\Split Month.Outputs[Derived Column Error Output]"
+                  description="Error Output of the Derived Column Transformation"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Derived Column Error Output"
+                  synchronousInputId="Package\Task 7b\Split Month.Inputs[Derived Column Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Task 7b\Split Month.Outputs[Derived Column Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Task 7b\Split Month.Outputs[Derived Column Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Task 7b\Split Month.Outputs[Derived Column Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Task 7b\Split Month.Outputs[Derived Column Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+          </components>
+          <paths>
+            <path
+              refId="Package\Task 7b.Paths[Derived Column Output]"
+              endId="Package\Task 7b\Convert Month Short Name.Inputs[Derived Column Input]"
+              name="Derived Column Output"
+              startId="Package\Task 7b\Split Month.Outputs[Derived Column Output]" />
+            <path
+              refId="Package\Task 7b.Paths[Derived Column Output1]"
+              endId="Package\Task 7b\Multicast.Inputs[Multicast Input 1]"
+              name="Derived Column Output"
+              startId="Package\Task 7b\Convert Month Short Name.Outputs[Derived Column Output]" />
+            <path
+              refId="Package\Task 7b.Paths[Flat File Source Output]"
+              endId="Package\Task 7b\Split Month.Inputs[Derived Column Input]"
+              name="Flat File Source Output"
+              startId="Package\Task 7b\Flat File Source.Outputs[Flat File Source Output]" />
+          </paths>
+        </pipeline>
+      </DTS:ObjectData>
+    </DTS:Executable>
+  </DTS:Executables>
+  <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
+<!--This CDATA section contains the layout information of the package. The section includes information such as (x,y) coordinates, width, and height.-->
+<!--If you manually edit this section and make a mistake, you can delete it. -->
+<!--The package will still be able to load normally but the previous layout information will be lost and the designer will automatically re-arrange the elements on the design surface.-->
+<Objects
+  Version="8">
+  <!--Each node below will contain properties that do not affect runtime behavior.-->
+  <Package
+    design-time-name="Package">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph">
+        <NodeLayout
+          Size="115.2,41.6"
+          Id="Package\Task 7b"
+          TopLeft="144.285716742885,84.8823541316194" />
+      </GraphLayout>
+    </LayoutInfo>
+  </Package>
+  <TaskHost
+    design-time-name="Package\Task 7b">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
+        <NodeLayout
+          Size="131.2,41.6"
+          Id="Package\Task 7b\Split Month"
+          TopLeft="283.928576263846,36.9607848320866" />
+        <NodeLayout
+          Size="120,41.6"
+          Id="Package\Task 7b\Multicast"
+          TopLeft="588.095248110441,36.9607848320866" />
+        <NodeLayout
+          Size="150.4,41.6"
+          Id="Package\Task 7b\Flat File Source"
+          TopLeft="23.8095242149976,31.8627455449022" />
+        <EdgeLayout
+          Id="Package\Task 7b.Paths[Flat File Source Output]"
+          TopLeft="174.209524214998,55.2117651884944">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="109.719052048849,0"
+              Start="0,0"
+              End="102.219052048849,0">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="102.219052048849,0" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="206.4,41.6"
+          Id="Package\Task 7b\Convert Month Short Name"
+          TopLeft="458.928579244079,152.303923704632" />
+        <EdgeLayout
+          Id="Package\Task 7b.Paths[Derived Column Output]"
+          TopLeft="349.528576263846,78.5607848320866">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="179.533336313566,73.7431388725459"
+              Start="0,0"
+              End="179.533336313566,66.2431388725459">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,39.905530374885" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,39.905530374885"
+                    Point2="0,43.905530374885"
+                    Point3="4,43.905530374885" />
+                  <mssgle:LineSegment
+                    End="175.533336313566,43.905530374885" />
+                  <mssgle:CubicBezierSegment
+                    Point1="175.533336313566,43.905530374885"
+                    Point2="179.533336313566,43.905530374885"
+                    Point3="179.533336313566,47.905530374885" />
+                  <mssgle:LineSegment
+                    End="179.533336313566,66.2431388725459" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Task 7b.Paths[Derived Column Output1]"
+          TopLeft="595.195245910745,152.303923704632">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="52.9000021996953,-73.7431388725459"
+              Start="0,0"
+              End="52.9000021996953,-66.2431388725459">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,-25.8376084976609" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,-25.8376084976609"
+                    Point2="0,-29.8376084976609"
+                    Point3="4,-29.8376084976609" />
+                  <mssgle:LineSegment
+                    End="48.9000021996953,-29.8376084976609" />
+                  <mssgle:CubicBezierSegment
+                    Point1="48.9000021996953,-29.8376084976609"
+                    Point2="52.9000021996953,-29.8376084976609"
+                    Point3="52.9000021996953,-33.8376084976609" />
+                  <mssgle:LineSegment
+                    End="52.9000021996953,-66.2431388725459" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="18.4500010998477,-24.8376084976609,16,16"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+</Objects>]]></DTS:DesignTimeProperties>
+</DTS:Executable>
